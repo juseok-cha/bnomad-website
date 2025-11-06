@@ -105,13 +105,36 @@ Language files are located in `lib/i18n/locales/`.
 4. Enable Storage
 5. Add Firebase config to `.env`
 
-## 📝 Content Management
+## 📝 Content Management & Blog System
 
-### Blog Posts (Admin Only)
-- Only authenticated admin users can create/edit blog posts
-- Posts are stored in Firebase Firestore
-- Supports markdown formatting
-- SEO-optimized
+### Blog Admin Panel
+The website includes a full-featured blog admin system with authentication:
+
+**Access**: `/[lang]/admin/login`
+
+#### Features:
+- **Firebase Authentication**: Secure email/password login for admin users
+- **Admin Dashboard** (`/[lang]/admin/dashboard`):
+  - View all blog posts (published and drafts)
+  - Edit, delete, and manage posts
+  - See post status, category, and publish dates
+- **Post Editor** (`/[lang]/admin/posts/new`):
+  - Bilingual content editor (English & Korean)
+  - Markdown support with syntax highlighting
+  - Category selection (Journey, Insights, Reflections, Reports)
+  - Tag management
+  - Featured post toggle
+  - Publish/draft control
+  - Auto-generated URL slugs
+
+#### Public Blog Pages:
+- **Blog Listing** (`/[lang]/blog`): Display all published posts with category badges
+- **Individual Post** (`/[lang]/blog/[slug]`): Full post view with markdown rendering
+
+### Contact Form
+- Firebase-powered contact form (`/[lang]/contact`)
+- Messages stored in Firestore `contacts` collection
+- Bilingual form with validation
 
 ## 🚀 Deployment
 
@@ -153,25 +176,50 @@ npm run lint     # Run ESLint
 
 Required environment variables (see `.env.example`):
 
+### Client-side Firebase Config:
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
+
+### Server-side Firebase Admin SDK (Optional):
+```bash
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxxx@project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
 ```
+
+### Setting up Admin User:
+1. Go to Firebase Console > Authentication
+2. Add a new user with email/password
+3. Use these credentials to login at `/[lang]/admin/login`
 
 ## 🗺️ Roadmap
 
-- [ ] Complete all page implementations
-- [ ] Add blog admin panel
-- [ ] Implement contact form with Firebase
-- [ ] Add image galleries for programs
-- [ ] Interactive Jeju House asset map
-- [ ] SEO optimization
+### ✅ Completed:
+- [x] Landing page with Hero, About, Programs, and CTA sections
+- [x] Bilingual routing (English & Korean)
+- [x] Blog admin panel with authentication
+- [x] Blog post editor with markdown support
+- [x] Public blog listing and individual post pages
+- [x] About page with timeline
+- [x] Contact form with Firebase integration
+- [x] Responsive navigation and footer
+
+### 🚧 In Progress / Future:
+- [ ] Programs detail pages (Spain Roadtrip, Lab Tour, etc.)
+- [ ] Projects showcase page
+- [ ] Team page with member profiles
+- [ ] Jeju House interactive page
+- [ ] Image upload for blog posts
+- [ ] SEO optimization (meta tags, sitemap)
 - [ ] Performance optimization
 - [ ] Analytics integration
+- [ ] Newsletter signup
 
 ## 📄 License
 
