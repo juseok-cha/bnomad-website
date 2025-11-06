@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects for i18n
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 200
+  force = false
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/ko/:splat"
+  status = 200
+  force = false
+  conditions = {Language = ["ko"]}
