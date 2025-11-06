@@ -104,7 +104,7 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
             </Heading>
             <Text fontSize="xl" color="gray.700" maxW="2xl">
               {lang === 'en'
-                ? 'Have questions or want to collaborate? We'd love to hear from you.'
+                ? "Have questions or want to collaborate? We'd love to hear from you."
                 : '질문이 있거나 협력을 원하시나요? 여러분의 이야기를 듣고 싶습니다.'}
             </Text>
           </VStack>

@@ -1,3 +1,6 @@
+'use client'
+
+import { useParams } from 'next/navigation'
 import {
   Box,
   Container,
@@ -13,13 +16,9 @@ import {
 } from '@chakra-ui/react'
 import aboutContent from '@/lib/i18n/locales/about.json'
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}) {
-  const resolvedParams = await params
-  const lang = resolvedParams.lang as 'en' | 'ko'
+export default function AboutPage() {
+  const params = useParams()
+  const lang = (params?.lang as 'en' | 'ko') || 'en'
   const content = aboutContent[lang]
 
   return (
