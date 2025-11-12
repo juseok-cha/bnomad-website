@@ -23,8 +23,9 @@ import {
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { collection, addDoc, Timestamp } from 'firebase/firestore'
 import { db } from '@/lib/firebase/config'
+import { useParams } from 'next/navigation'
 
-export default function ContactPage({ params }: { params: { lang: string } }) {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +34,11 @@ export default function ContactPage({ params }: { params: { lang: string } }) {
   })
   const [loading, setLoading] = useState(false)
   const toast = useToast()
-  const lang = params.lang as 'en' | 'ko'
+  const routingParams = useParams<{ lang?: string | string[] }>()
+  const langParam = Array.isArray(routingParams?.lang)
+    ? routingParams?.lang[0]
+    : routingParams?.lang
+  const lang = langParam === 'ko' ? 'ko' : 'en'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

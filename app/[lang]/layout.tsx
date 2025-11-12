@@ -1,5 +1,9 @@
 import { Providers } from "../providers";
-import { getDictionary } from "@/lib/i18n/dictionaries";
+import {
+  getDictionary,
+  isLocale,
+  type Locale,
+} from "@/lib/i18n/dictionaries";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 
@@ -14,16 +18,18 @@ export default async function LangLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
-  const resolvedParams = await params;
-  const dict = await getDictionary(resolvedParams.lang as "en" | "ko");
+  const { lang } = await params;
+  const fallbackLocale: Locale = "en";
+  const locale = isLocale(lang) ? lang : fallbackLocale;
+  const dict = await getDictionary(locale);
 
   return (
-    <html lang={resolvedParams.lang}>
+    <html lang={locale}>
       <body>
         <Providers>
-          <Navigation lang={resolvedParams.lang as "en" | "ko"} dict={dict} />
+          <Navigation lang={locale} dict={dict} />
           <main>{children}</main>
-          <Footer lang={resolvedParams.lang as "en" | "ko"} dict={dict} />
+          <Footer lang={locale} dict={dict} />
         </Providers>
       </body>
     </html>

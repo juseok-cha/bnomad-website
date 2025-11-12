@@ -54,28 +54,33 @@ bnomad-website/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/juseok-cha/bnomad-website.git
 cd bnomad-website
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.example .env
 ```
 
 4. Add your Firebase configuration to `.env`:
+
    - Go to [Firebase Console](https://console.firebase.google.com/)
    - Create a new project or use existing
    - Go to Project Settings > General
    - Copy the Firebase config values to `.env`
 
 5. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -94,11 +99,13 @@ Language files are located in `lib/i18n/locales/`.
 ## 🔥 Firebase Setup
 
 ### Required Firebase Services:
+
 - **Authentication**: For blog admin access
 - **Firestore**: For blog posts and content storage
 - **Storage**: For image uploads
 
 ### Setting up Firebase:
+
 1. Create a Firebase project
 2. Enable Authentication (Email/Password)
 3. Create Firestore database
@@ -108,11 +115,13 @@ Language files are located in `lib/i18n/locales/`.
 ## 📝 Content Management & Blog System
 
 ### Blog Admin Panel
+
 The website includes a full-featured blog admin system with authentication:
 
 **Access**: `/[lang]/admin/login`
 
 #### Features:
+
 - **Firebase Authentication**: Secure email/password login for admin users
 - **Admin Dashboard** (`/[lang]/admin/dashboard`):
   - View all blog posts (published and drafts)
@@ -128,10 +137,12 @@ The website includes a full-featured blog admin system with authentication:
   - Auto-generated URL slugs
 
 #### Public Blog Pages:
+
 - **Blog Listing** (`/[lang]/blog`): Display all published posts with category badges
 - **Individual Post** (`/[lang]/blog/[slug]`): Full post view with markdown rendering
 
 ### Contact Form
+
 - Firebase-powered contact form (`/[lang]/contact`)
 - Messages stored in Firestore `contacts` collection
 - Bilingual form with validation
@@ -148,18 +159,31 @@ The website includes a full-featured blog admin system with authentication:
 4. Add environment variables in Netlify dashboard (same as `.env`)
 5. Deploy!
 
+## 🤝 GitHub Workflow
+
+- **Create a branch**: `git checkout -b feature/short-description` for new work.
+- **Commit often**: add clear commit messages that explain the change.
+- **Pull before pushing**: `git pull --rebase origin main` to keep your branch up to date.
+- **Open a PR**: push the branch to GitHub and open a pull request targeting `main`.
+- **Code review**: incorporate feedback, ensure checks pass, and then merge via GitHub.
+
 ### Netlify Plugin
+
 The project uses `@netlify/plugin-nextjs` for optimal Next.js deployment.
 
 ## 🎨 Customization
 
 ### Colors
+
 Brand colors are defined in `app/providers.tsx`. Modify the theme object to customize:
+
 - `brand`: Primary blue color scheme
 - `accent`: Secondary orange color scheme
 
 ### Content
+
 All text content is in `lib/i18n/locales/`:
+
 - Edit `en.json` for English content
 - Edit `ko.json` for Korean content
 
@@ -177,6 +201,7 @@ npm run lint     # Run ESLint
 Required environment variables (see `.env.example`):
 
 ### Client-side Firebase Config:
+
 ```bash
 NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
@@ -187,6 +212,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 
 ### Server-side Firebase Admin SDK (Optional):
+
 ```bash
 FIREBASE_PROJECT_ID=your_project_id
 FIREBASE_CLIENT_EMAIL=firebase-adminsdk-xxxxx@project.iam.gserviceaccount.com
@@ -194,6 +220,7 @@ FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY----
 ```
 
 ### Setting up Admin User:
+
 1. Go to Firebase Console > Authentication
 2. Add a new user with email/password
 3. Use these credentials to login at `/[lang]/admin/login`
@@ -201,6 +228,7 @@ FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY----
 ## 🗺️ Roadmap
 
 ### ✅ Completed:
+
 - [x] Landing page with Hero, About, Programs, and CTA sections
 - [x] Bilingual routing (English & Korean)
 - [x] Blog admin panel with authentication
@@ -211,6 +239,7 @@ FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY----
 - [x] Responsive navigation and footer
 
 ### 🚧 In Progress / Future:
+
 - [ ] Programs detail pages (Spain Roadtrip, Lab Tour, etc.)
 - [ ] Projects showcase page
 - [ ] Team page with member profiles
