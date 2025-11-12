@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "projects": "Projects",
+    "blog": "Stories",
+    "team": "Team",
+    "contact": "Contact",
+    "jejuHouse": "Jeju House"
+  },
+  "hero": {
+    "tagline": "Venture Studio for Glocal Innovation",
+    "subtitle": "with Soul and Authenticity",
+    "description": "BNomad bridges global innovation and local communities, creating meaningful ventures that honor both tradition and transformation.",
+    "cta": {
+      "explore": "Explore Programs",
+      "partner": "Partner with Us"
+    }
+  },
+  "about": {
+    "title": "About BNomad",
+    "heading": "Glocal Innovation with Purpose",
+    "description": "We are a venture studio based in Jeju, Korea, dedicated to fostering innovation that respects local culture while embracing global collaboration. Through programs like Spain Roadtrips, Lab Tours, and our Jeju Sehwa House, we create spaces where LEINNers and local innovators can co-create meaningful projects.",
+    "mission": "Our mission is to build ventures with soul — projects that matter to communities and create lasting impact.",
+    "cta": "Learn Our Story"
+  },
+  "programs": {
+    "title": "Featured Programs",
+    "viewAll": "View All Programs",
+    "spainRoadtrip": {
+      "title": "Spain Roadtrip",
+      "description": "An immersive journey through the Basque Country's cooperative ecosystem, connecting with Mondragon University and local innovators.",
+      "cta": "Learn More"
+    },
+    "labTour": {
+      "title": "Lab Tour",
+      "description": "Hands-on exploration of innovation labs and maker spaces, fostering cross-cultural learning and collaboration.",
+      "cta": "Learn More"
+    },
+    "jejuHouse": {
+      "title": "Jeju Sehwa House",
+      "description": "Our home base in Jeju — a collaborative space for programs, workshops, and community gatherings.",
+      "cta": "Explore the House"
+    },
+    "popupCollabs": {
+      "title": "Pop-up Collaborations",
+      "description": "Short-term intensive projects that bring together diverse talents to solve real community challenges.",
+      "cta": "Learn More"
+    }
+  },
+  "cta": {
+    "join": {
+      "title": "Ready to Join the Journey?",
+      "description": "Whether you're a student, entrepreneur, or partner organization, there's a place for you in the BNomad community.",
+      "button": "Apply Now"
+    },
+    "partner": {
+      "title": "Partner with BNomad",
+      "description": "We collaborate with universities, communities, and organizations that share our vision for meaningful innovation.",
+      "button": "Get in Touch"
+    }
+  },
+  "footer": {
+    "tagline": "Glocal Innovation with Soul and Authenticity",
+    "connect": "Connect",
+    "quickLinks": "Quick Links",
+    "copyright": "© 2024 BNomad. All rights reserved."
+  }
+}
