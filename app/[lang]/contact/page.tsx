@@ -209,11 +209,11 @@ export default function ContactPage() {
                         {lang === 'en' ? 'Email' : '이메일'}
                       </Text>
                       <ChakraLink
-                        href="mailto:hello@bnomad.io"
+                        href="mailto:info@bnomad.co"
                         color="brand.600"
                         isExternal
                       >
-                        hello@bnomad.io
+                        info@bnomad.co
                       </ChakraLink>
                     </VStack>
                   </HStack>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                   </Text>
                   <VStack align="start" spacing={3}>
                     <ChakraLink
-                      href="https://instagram.com/bnomad"
+                      href="https://instagram.com/bnomad.co"
                       isExternal
                       color="brand.600"
                       display="flex"
@@ -238,7 +238,7 @@ export default function ContactPage() {
                       Instagram <ExternalLinkIcon ml={2} />
                     </ChakraLink>
                     <ChakraLink
-                      href="https://linkedin.com/company/bnomad"
+                      href="https://www.linkedin.com/company/bnomad-inc/?viewAsMember=true"
                       isExternal
                       color="brand.600"
                       display="flex"

@@ -53,13 +53,13 @@ export default function Footer({ lang, dict }: FooterProps) {
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
               {dict.footer.connect}
             </Text>
-            <ChakraLink href="https://instagram.com/bnomad" isExternal>
+            <ChakraLink href="https://instagram.com/bnomad.co" isExternal>
               Instagram
             </ChakraLink>
-            <ChakraLink href="https://linkedin.com/company/bnomad" isExternal>
+            <ChakraLink href="https://www.linkedin.com/company/bnomad-inc/?viewAsMember=true" isExternal>
               LinkedIn
             </ChakraLink>
-            <ChakraLink href="mailto:hello@bnomad.io">Email</ChakraLink>
+            <ChakraLink href="mailto:info@bnomad.co">Email</ChakraLink>
           </Stack>
           <Stack align={'flex-start'}>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
