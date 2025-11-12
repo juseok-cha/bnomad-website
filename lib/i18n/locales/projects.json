@@ -1,0 +1,210 @@
+{
+  "en": {
+    "hero": {
+      "title": "Our Projects",
+      "subtitle": "Ventures building meaningful impact through glocal innovation"
+    },
+    "overview": {
+      "description": "At BNomad, we don't just facilitate programs—we build ventures. Each project represents our commitment to creating businesses with soul, combining global innovation practices with deep local engagement."
+    },
+    "projects": {
+      "openWaste": {
+        "title": "Open Waste",
+        "tagline": "Transforming waste management through community collaboration",
+        "category": "Environmental Innovation",
+        "description": "Open Waste is a collaborative platform connecting communities, waste management initiatives, and circular economy innovators. By making waste data transparent and accessible, we're helping communities reduce waste and create value from materials that would otherwise be discarded.",
+        "challenge": "Waste management remains a critical challenge in many communities, with limited visibility into waste streams and few pathways for community-driven solutions.",
+        "solution": "We created an open-source platform that maps waste streams, connects stakeholders, and facilitates circular economy initiatives at the community level.",
+        "impact": [
+          "Connected 15+ community waste initiatives",
+          "Mapped waste streams in 5 pilot communities",
+          "Facilitated partnerships between waste producers and upcyclers",
+          "Open-source toolkit adopted by 3 municipalities"
+        ],
+        "partners": [
+          "Local waste management cooperatives",
+          "Environmental NGOs",
+          "Circular economy startups",
+          "Municipal governments"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "politico": {
+        "title": "Politico",
+        "tagline": "Reimagining political engagement for digital citizens",
+        "category": "Civic Innovation",
+        "description": "Politico explores new models for political participation and civic engagement in the digital age. Through technology and community organizing, we're helping citizens connect with local governance and participate meaningfully in decision-making.",
+        "challenge": "Traditional political engagement models struggle to connect with younger, digitally-native citizens, leading to declining civic participation.",
+        "solution": "A platform combining digital tools with community organizing to make local politics more accessible, transparent, and participatory.",
+        "impact": [
+          "Engaged 500+ young citizens in local governance",
+          "Facilitated 20+ community decision-making sessions",
+          "Partnered with 8 local governments",
+          "Documented best practices for digital civic engagement"
+        ],
+        "partners": [
+          "Local government councils",
+          "Youth civic organizations",
+          "Democracy innovation labs",
+          "Community organizers"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "beeModel": {
+        "title": "BEE Model",
+        "tagline": "Business, Environment, Education ecosystem framework",
+        "category": "Systems Innovation",
+        "description": "The BEE Model is a framework for creating regenerative business ecosystems that integrate business viability, environmental stewardship, and continuous learning. It provides tools and methodologies for organizations to transition toward more sustainable, community-centered models.",
+        "challenge": "Many organizations want to operate more sustainably but lack practical frameworks that integrate business, environmental, and educational dimensions.",
+        "solution": "A comprehensive methodology combining cooperative principles, environmental design, and learning systems into a cohesive operational framework.",
+        "impact": [
+          "Framework adopted by 12 organizations",
+          "Workshops delivered to 200+ business leaders",
+          "3 case studies published",
+          "Toolkit translated into 4 languages"
+        ],
+        "partners": [
+          "Mondragon University",
+          "Sustainability consultancies",
+          "B-Corp community",
+          "Educational institutions"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "glocalLab": {
+        "title": "Glocal Innovation Lab",
+        "tagline": "Experimental space for glocal innovation methodologies",
+        "category": "Innovation Practice",
+        "description": "The Glocal Innovation Lab is our R&D arm, where we develop and test new methodologies for bridging global innovation practices with local contexts. It's both a physical and conceptual space for experimentation, learning, and knowledge creation.",
+        "challenge": "Innovation methodologies often fail when transplanted across cultures without adaptation to local contexts and values.",
+        "solution": "An experimental lab developing culturally-adapted innovation practices through iterative testing with diverse communities.",
+        "impact": [
+          "Developed 5 new glocal innovation methodologies",
+          "Tested with communities in 7 countries",
+          "Published research papers and practitioner guides",
+          "Trained 50+ innovation facilitators"
+        ],
+        "partners": [
+          "LEINN network universities",
+          "Innovation research centers",
+          "Local community organizations",
+          "International development agencies"
+        ],
+        "status": "Ongoing",
+        "website": "#"
+      }
+    },
+    "cta": {
+      "title": "Want to Collaborate?",
+      "description": "We're always open to partnerships and collaborations on meaningful projects.",
+      "button": "Get in Touch"
+    }
+  },
+  "ko": {
+    "hero": {
+      "title": "프로젝트",
+      "subtitle": "글로컬 혁신을 통해 의미 있는 영향을 만드는 벤처"
+    },
+    "overview": {
+      "description": "비노마드는 단순히 프로그램을 진행하는 것이 아니라 벤처를 만듭니다. 각 프로젝트는 글로벌 혁신 관행과 깊은 로컬 참여를 결합하여 영혼이 담긴 비즈니스를 만들겠다는 우리의 약속을 나타냅니다."
+    },
+    "projects": {
+      "openWaste": {
+        "title": "오픈 웨이스트",
+        "tagline": "커뮤니티 협력을 통한 폐기물 관리 혁신",
+        "category": "환경 혁신",
+        "description": "오픈 웨이스트는 커뮤니티, 폐기물 관리 이니셔티브, 순환 경제 혁신가들을 연결하는 협업 플랫폼입니다. 폐기물 데이터를 투명하고 접근 가능하게 만들어 커뮤니티가 폐기물을 줄이고 버려질 자재에서 가치를 창출할 수 있도록 돕습니다.",
+        "challenge": "폐기물 관리는 많은 커뮤니티에서 중요한 과제로 남아 있으며, 폐기물 흐름에 대한 가시성이 제한적이고 커뮤니티 주도 솔루션을 위한 경로가 거의 없습니다.",
+        "solution": "폐기물 흐름을 매핑하고, 이해관계자를 연결하며, 커뮤니티 수준에서 순환 경제 이니셔티브를 촉진하는 오픈소스 플랫폼을 만들었습니다.",
+        "impact": [
+          "15개 이상의 커뮤니티 폐기물 이니셔티브 연결",
+          "5개 파일럿 커뮤니티의 폐기물 흐름 매핑",
+          "폐기물 생산자와 업사이클러 간 파트너십 촉진",
+          "3개 지자체에서 오픈소스 툴킷 채택"
+        ],
+        "partners": [
+          "로컬 폐기물 관리 협동조합",
+          "환경 NGO",
+          "순환 경제 스타트업",
+          "지방 정부"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "politico": {
+        "title": "폴리티코",
+        "tagline": "디지털 시민을 위한 정치 참여 재구상",
+        "category": "시민 혁신",
+        "description": "폴리티코는 디지털 시대의 정치 참여와 시민 참여를 위한 새로운 모델을 탐구합니다. 기술과 커뮤니티 조직화를 통해 시민들이 로컬 거버넌스와 연결되고 의사 결정에 의미 있게 참여할 수 있도록 돕습니다.",
+        "challenge": "전통적인 정치 참여 모델은 젊고 디지털 네이티브 시민들과 연결하는 데 어려움을 겪고 있어 시민 참여가 감소하고 있습니다.",
+        "solution": "디지털 도구와 커뮤니티 조직화를 결합하여 로컬 정치를 더 접근 가능하고 투명하며 참여적으로 만드는 플랫폼입니다.",
+        "impact": [
+          "500명 이상의 젊은 시민이 로컬 거버넌스에 참여",
+          "20개 이상의 커뮤니티 의사 결정 세션 촉진",
+          "8개 지방 정부와 파트너십",
+          "디지털 시민 참여 모범 사례 문서화"
+        ],
+        "partners": [
+          "지방 정부 의회",
+          "청년 시민 단체",
+          "민주주의 혁신 랩",
+          "커뮤니티 조직가"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "beeModel": {
+        "title": "BEE 모델",
+        "tagline": "비즈니스, 환경, 교육 생태계 프레임워크",
+        "category": "시스템 혁신",
+        "description": "BEE 모델은 비즈니스 생존 가능성, 환경 책임, 지속적인 학습을 통합하는 재생적 비즈니스 생태계를 만들기 위한 프레임워크입니다. 조직이 더 지속 가능하고 커뮤니티 중심의 모델로 전환할 수 있도록 도구와 방법론을 제공합니다.",
+        "challenge": "많은 조직이 더 지속 가능하게 운영하기를 원하지만 비즈니스, 환경, 교육적 차원을 통합하는 실용적인 프레임워크가 부족합니다.",
+        "solution": "협동조합 원칙, 환경 디자인, 학습 시스템을 일관된 운영 프레임워크로 결합한 포괄적인 방법론입니다.",
+        "impact": [
+          "12개 조직에서 프레임워크 채택",
+          "200명 이상의 비즈니스 리더에게 워크숍 제공",
+          "3개 사례 연구 발표",
+          "4개 언어로 툴킷 번역"
+        ],
+        "partners": [
+          "몬드라곤 대학교",
+          "지속 가능성 컨설팅",
+          "B-Corp 커뮤니티",
+          "교육 기관"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "glocalLab": {
+        "title": "글로컬 혁신 랩",
+        "tagline": "글로컬 혁신 방법론을 위한 실험 공간",
+        "category": "혁신 실천",
+        "description": "글로컬 혁신 랩은 글로벌 혁신 관행과 로컬 맥락을 연결하는 새로운 방법론을 개발하고 테스트하는 R&D 부문입니다. 실험, 학습, 지식 창출을 위한 물리적이고 개념적인 공간입니다.",
+        "challenge": "혁신 방법론은 로컬 맥락과 가치에 맞게 조정하지 않고 문화 간에 이식될 때 종종 실패합니다.",
+        "solution": "다양한 커뮤니티와 반복 테스트를 통해 문화적으로 적응된 혁신 실천을 개발하는 실험 랩입니다.",
+        "impact": [
+          "5개의 새로운 글로컬 혁신 방법론 개발",
+          "7개국 커뮤니티에서 테스트",
+          "연구 논문 및 실무자 가이드 발표",
+          "50명 이상의 혁신 촉진자 교육"
+        ],
+        "partners": [
+          "LEINN 네트워크 대학",
+          "혁신 연구 센터",
+          "로컬 커뮤니티 조직",
+          "국제 개발 기관"
+        ],
+        "status": "진행 중",
+        "website": "#"
+      }
+    },
+    "cta": {
+      "title": "협업하고 싶으신가요?",
+      "description": "의미 있는 프로젝트에 대한 파트너십과 협업에 항상 열려 있습니다.",
+      "button": "문의하기"
+    }
+  }
+}

@@ -14,17 +14,12 @@ import {
   Stack,
   Divider,
 } from '@chakra-ui/react'
-import { isLocale, type Locale } from '@/lib/i18n/dictionaries'
 import aboutContent from '@/lib/i18n/locales/about.json'
 
 export default function AboutPage() {
   const params = useParams()
-  const langParam = params?.lang
-  const fallbackLocale: Locale = 'en'
-  const locale = isLocale(Array.isArray(langParam) ? langParam[0] : langParam)
-    ? (Array.isArray(langParam) ? langParam[0] : langParam)
-    : fallbackLocale
-  const content = aboutContent[locale]
+  const lang = (params?.lang as 'en' | 'ko') || 'en'
+  const content = aboutContent[lang]
 
   return (
     <>
