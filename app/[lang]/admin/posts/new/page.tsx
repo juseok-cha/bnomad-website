@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { useRouter, useParams } from 'next/navigation'
 import {
   Box,
   Container,
@@ -26,8 +26,11 @@ import {
 import { useAuth } from '@/lib/contexts/AuthContext'
 import { createPost } from '@/lib/firebase/blogService'
 import { BlogPostInput } from '@/lib/types/blog'
+import AdminLayout from '@/components/admin/AdminLayout'
 
-export default function NewPost({ params }: { params: { lang: string } }) {
+export default function NewPost() {
+  const params = useParams()
+  const lang = params?.lang as string || 'en'
   const [formData, setFormData] = useState<BlogPostInput>({
     title: { en: '', ko: '' },
     slug: '',
@@ -45,12 +48,6 @@ export default function NewPost({ params }: { params: { lang: string } }) {
   const { user } = useAuth()
   const router = useRouter()
   const toast = useToast()
-
-  useEffect(() => {
-    if (!user) {
-      router.push(`/${params.lang}/admin/login`)
-    }
-  }, [user, router, params.lang])
 
   const generateSlug = (title: string) => {
     return title
@@ -126,22 +123,19 @@ export default function NewPost({ params }: { params: { lang: string } }) {
     }
   }
 
-  if (!user) {
-    return null
-  }
-
   return (
-    <Container maxW="container.xl" py={10}>
-      <VStack spacing={6} align="stretch">
-        <HStack justify="space-between">
-          <Heading size="xl">Create New Post</Heading>
-          <Button
-            variant="ghost"
-            onClick={() => router.push(`/${params.lang}/admin/dashboard`)}
-          >
-            Cancel
-          </Button>
-        </HStack>
+    <AdminLayout lang={lang}>
+      <Container maxW="container.xl" py={8}>
+        <VStack spacing={6} align="stretch">
+          <HStack justify="space-between">
+            <Heading size="xl">Create New Post</Heading>
+            <Button
+              variant="ghost"
+              onClick={() => router.push(`/${lang}/admin/dashboard`)}
+            >
+              Cancel
+            </Button>
+          </HStack>
 
         <form onSubmit={handleSubmit}>
           <VStack spacing={6} align="stretch">
@@ -349,5 +343,6 @@ export default function NewPost({ params }: { params: { lang: string } }) {
         </form>
       </VStack>
     </Container>
+    </AdminLayout>
   )
 }
