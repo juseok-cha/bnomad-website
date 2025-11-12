@@ -24,14 +24,10 @@ export default async function LangLayout({
   const dict = await getDictionary(locale);
 
   return (
-    <html lang={locale}>
-      <body>
-        <Providers>
-          <Navigation lang={locale} dict={dict} />
-          <main>{children}</main>
-          <Footer lang={locale} dict={dict} />
-        </Providers>
-      </body>
-    </html>
+    <Providers>
+      <Navigation lang={locale} dict={dict} />
+      <main>{children}</main>
+      <Footer lang={locale} dict={dict} />
+    </Providers>
   );
 }

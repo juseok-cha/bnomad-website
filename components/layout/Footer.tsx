@@ -88,6 +88,15 @@ export default function Footer({ lang, dict }: FooterProps) {
           align={{ md: 'center' }}
         >
           <Text fontSize={'sm'}>{dict.footer.copyright}</Text>
+          <Link href={`/${lang}/admin/login`}>
+            <ChakraLink
+              fontSize={'xs'}
+              color={useColorModeValue('gray.500', 'gray.400')}
+              _hover={{ color: 'brand.500' }}
+            >
+              Admin
+            </ChakraLink>
+          </Link>
         </Container>
       </Box>
     </Box>
