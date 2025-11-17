@@ -17,8 +17,9 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { useAuth } from '@/lib/contexts/AuthContext'
+import { resolveLangParam } from '@/lib/i18n/localeUtils'
 
-export default function AdminLogin({ params }: { params: { lang: string } }) {
+export default function AdminLogin({ params }: { params: { lang?: string } }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -26,6 +27,7 @@ export default function AdminLogin({ params }: { params: { lang: string } }) {
 
   const { signIn } = useAuth()
   const router = useRouter()
+  const lang = resolveLangParam(params?.lang)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -34,7 +36,7 @@ export default function AdminLogin({ params }: { params: { lang: string } }) {
 
     try {
       await signIn(email, password)
-      router.push(`/${params.lang}/admin/dashboard`)
+      router.push(`/${lang}/admin/dashboard`)
     } catch (err: any) {
       setError(err.message || 'Failed to sign in. Please check your credentials.')
     } finally {
