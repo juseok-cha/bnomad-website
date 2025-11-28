@@ -4,30 +4,42 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { AuthProvider } from '@/lib/contexts/AuthContext'
 
 const theme = extendTheme({
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+  },
+  styles: {
+    global: {
+      body: {
+        bg: '#000000',
+        color: '#FFFFFF',
+      },
+    },
+  },
   colors: {
     brand: {
-      50: '#e3f2fd',
-      100: '#bbdefb',
-      200: '#90caf9',
-      300: '#64b5f6',
-      400: '#42a5f5',
-      500: '#2196f3',
-      600: '#1e88e5',
-      700: '#1976d2',
-      800: '#1565c0',
-      900: '#0d47a1',
+      50: '#FFE8E0',
+      100: '#FFC1B0',
+      200: '#FF9A80',
+      300: '#FF7350',
+      400: '#FF4C20',
+      500: '#F93F05', // Main highlight color
+      600: '#D93604',
+      700: '#B92D03',
+      800: '#992402',
+      900: '#791B02',
     },
-    accent: {
-      50: '#fff3e0',
-      100: '#ffe0b2',
-      200: '#ffcc80',
-      300: '#ffb74d',
-      400: '#ffa726',
-      500: '#ff9800',
-      600: '#fb8c00',
-      700: '#f57c00',
-      800: '#ef6c00',
-      900: '#e65100',
+    dark: {
+      50: '#E6E6E6',
+      100: '#CCCCCC',
+      200: '#999999',
+      300: '#666666',
+      400: '#4D4D4D',
+      500: '#333333',
+      600: '#1A1A1A',
+      700: '#0D0D0D',
+      800: '#050505',
+      900: '#000000',
     },
   },
   fonts: {
