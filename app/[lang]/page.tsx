@@ -1,5 +1,4 @@
-'use client'
-
+import { isLocale, type Locale } from '@/lib/i18n/dictionaries'
 import {
   Box,
   Container,
@@ -9,469 +8,480 @@ import {
   VStack,
   HStack,
   SimpleGrid,
-  Image,
-  Divider,
-} from "@chakra-ui/react"
-import Link from "next/link"
-import { DownloadIcon } from "@chakra-ui/icons"
-import { useParams } from 'next/navigation'
+  Badge,
+} from '@chakra-ui/react'
+import Link from 'next/link'
+import projectsContent from '@/lib/i18n/locales/projects.json'
 
-export default function Home() {
-  const params = useParams()
-  const lang = (params?.lang as 'en' | 'ko') || 'en'
-  const locale = lang === 'ko' ? 'ko' : 'en'
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ko' }]
+}
+
+const copy = {
+  en: {
+    hero: {
+      eyebrow: 'Venture Studio',
+      title: 'Be Nomad, Be Glocal',
+      description:
+        'A glocal impact accelerator rooted in Seoul and Jeju—building ventures, programs, and labs with global vision and local depth.',
+      brochure: 'Download Brochure',
+      contact: 'Talk to Us',
+      brochureLink: '/assets/bnomad-brochure.pdf',
+    },
+    intro: {
+      eyebrow: 'Our mission',
+      title: 'Authentic relationships, bold challenges',
+      body: [
+        'We cultivate teams that connect people, culture, and ideas beyond borders.',
+        'We build ecosystems where daring teams can grow through real practice.',
+      ],
+      stats: [
+        { label: 'Global MTA labs', value: '14' },
+        { label: 'University programs', value: '30' },
+        { label: 'Business projects', value: '220' },
+      ],
+    },
+    vision: {
+      title: 'Future forward',
+      items: [
+        {
+          title: 'Glocal flow from Korea to the world',
+          desc: 'Build a bridge where local strengths and global reach move together.',
+        },
+        {
+          title: 'Connected labs, programs, strategy',
+          desc: 'Link open labs, immersive programs, and venture strategy into one platform.',
+        },
+        {
+          title: 'Make the future together',
+          desc: "We don't wait for change—we build it collectively, across teams and borders.",
+        },
+      ],
+    },
+    team: {
+      title: 'Team mantra',
+      mantraTitle: 'Team mantra',
+      mantra: [
+        'Learning through action—depth comes from doing.',
+        'Glocal thinking—wide global view, deep local insight.',
+        'Diversity and autonomy—respect perspectives, work with trust.',
+        'Teampreneurship—we challenge and grow as one team.',
+      ],
+      photos: [
+        {
+          title: 'Field learning',
+          subtitle: 'Roadtrips with LEINNers',
+          image:
+            'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80',
+        },
+        {
+          title: 'Making together',
+          subtitle: 'Labs, tools, and hands-on work',
+          image:
+            'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+        },
+      ],
+    },
+    projects: {
+      title: 'Projects we are building',
+      cta: 'See all projects',
+    },
+    collab: {
+      title: 'Wanna collab?',
+      subtitle: 'We partner with founders, universities, and communities to build ventures with heart.',
+      button: 'Start a project with us',
+    },
+  },
+  ko: {
+    hero: {
+      eyebrow: '벤처 스튜디오',
+      title: 'Be Nomad, Be Glocal',
+      description:
+        '포용적 지속가능성을 촉진하는 글로컬 임팩트 액셀러레이터 — 서울·제주를 기반으로 글로벌 비전과 로컬 깊이를 연결합니다.',
+      brochure: '브로슈어 다운로드',
+      contact: '함께 이야기해요',
+      brochureLink: '/assets/bnomad-brochure.pdf',
+    },
+    intro: {
+      eyebrow: '미션',
+      title: '진정성 있는 관계를 맺으며 나다움에 도전',
+      body: [
+        '사람·문화·아이디어를 넘어 연결을 만들고,',
+        '도전적인 팀이 성장할 수 있는 생태계를 구축합니다.',
+      ],
+      stats: [
+        { label: '글로벌 MTA 랩', value: '14' },
+        { label: '대학 프로그램', value: '30' },
+        { label: '비즈니스 프로젝트', value: '220' },
+      ],
+    },
+    vision: {
+      title: 'Future forward',
+      items: [
+        {
+          title: '한국에서 세계로 이어지는 흐름',
+          desc: '로컬의 힘과 글로벌 확장을 함께 만드는 글로컬 흐름.',
+        },
+        {
+          title: '랩–프로그램–전략의 연결',
+          desc: '오픈랩, 프로그램, 전략을 하나의 변혁 플랫폼으로 연결합니다.',
+        },
+        {
+          title: '함께 만드는 미래',
+          desc: '미래는 기다리는 것이 아니라 함께 만들어간다는 믿음.',
+        },
+      ],
+    },
+    team: {
+      title: '팀 만트라',
+      mantraTitle: '팀 만트라',
+      mantra: [
+        '실행을 통한 배움 — 깊이는 직접 경험에서 나온다.',
+        '글로컬 사고 — 넓은 글로벌 시야와 깊은 로컬 통찰.',
+        '다양성과 자율성 — 관점을 존중하고 신뢰 기반으로 일한다.',
+        '팀프러너십 — 창업가정신으로 하나의 팀처럼 도전하고 성장한다.',
+      ],
+      photos: [
+        {
+          title: '현장에서 배우기',
+          subtitle: '레이너와 함께하는 로드트립',
+          image:
+            'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1200&q=80',
+        },
+        {
+          title: '함께 만드는 시간',
+          subtitle: '랩, 도구, 손으로 배우는 협업',
+          image:
+            'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+        },
+      ],
+    },
+    projects: {
+      title: '우리가 만드는 프로젝트',
+      cta: '모든 프로젝트 보기',
+    },
+    collab: {
+      title: '같이 만들까요?',
+      subtitle: '창업가, 대학, 커뮤니티와 함께 마음이 있는 벤처를 빌드합니다.',
+      button: '프로젝트 시작하기',
+    },
+  },
+}
+
+export default async function Home({ params }: { params: { lang: string } }) {
+  const { lang } = params
+  const fallbackLocale: Locale = 'en'
+  const locale = isLocale(lang) ? lang : fallbackLocale
+  const t = copy[locale]
+  const projects = projectsContent[locale].projects
+  const projectCards = Object.values(projects).slice(0, 3)
 
   return (
-    <Box bg="black" minH="100vh">
-      {/* Hero Section with Brochure CTA */}
-      <Container maxW="1400px" px={{ base: 4, md: 8, lg: 12 }}>
-        <VStack
-          minH="90vh"
-          justify="center"
-          align="flex-start"
-          spacing={8}
-          py={20}
-        >
-          <Box>
-            <Text
-              fontSize={{ base: "sm", md: "md" }}
-              color="brand.500"
-              fontWeight="600"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              mb={4}
-            >
-              {locale === 'en' ? 'Venture Studio' : '벤처 스튜디오'}
-            </Text>
-            <Heading
-              as="h1"
-              fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
-              fontWeight="800"
-              lineHeight="1.1"
-              color="white"
-              maxW="1000px"
-              mb={6}
-            >
-              {locale === 'en' ? (
-                <>
-                  Glocal Innovation
-                  <br />
-                  with Soul &{" "}
-                  <Text as="span" color="brand.500">
-                    Authenticity
-                  </Text>
-                </>
-              ) : (
-                <>
-                  영혼과{" "}
-                  <Text as="span" color="brand.500">
-                    진정성
-                  </Text>
-                  을 담은
-                  <br />
-                  글로컬 혁신
-                </>
-              )}
-            </Heading>
-            <Text
-              fontSize={{ base: "lg", md: "xl" }}
-              color="gray.400"
-              maxW="700px"
-              mb={8}
-              lineHeight="1.8"
-            >
-              {locale === 'en'
-                ? 'We bridge global innovation and local communities, creating meaningful ventures that honor both tradition and transformation.'
-                : '글로벌 혁신과 로컬 커뮤니티를 연결하여 전통과 변화를 모두 존중하는 의미 있는 벤처를 만듭니다.'}
-            </Text>
-          </Box>
-
-          <HStack spacing={4} flexWrap="wrap">
-            <Button
-              size="lg"
+    <Box bg="black" minH="100vh" color="white">
+      <Container maxW="1400px" px={{ base: 4, md: 8, lg: 12 }} py={12}>
+        {/* Hero */}
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16} py={12} alignItems="center">
+          <VStack align="flex-start" spacing={6}>
+            <Badge
+              colorScheme="orange"
               bg="brand.500"
-              color="white"
-              px={8}
-              py={6}
-              fontSize="md"
-              fontWeight="600"
-              leftIcon={<DownloadIcon />}
-              _hover={{ bg: "brand.600", transform: "translateY(-2px)" }}
-              transition="all 0.2s"
+              color="black"
+              px={3}
+              py={1}
+              borderRadius="full"
+              textTransform="uppercase"
+              fontWeight="700"
+              letterSpacing="wide"
             >
-              {locale === 'en' ? 'Download Brochure' : '브로슈어 다운로드'}
-            </Button>
-            <Link href={`/${locale}/projects`}>
+              {t.hero.eyebrow}
+            </Badge>
+            <Heading as="h1" fontSize={{ base: '4xl', md: '6xl', lg: '7xl' }} lineHeight="1.05">
+              {t.hero.title}
+            </Heading>
+            <Text fontSize={{ base: 'lg', md: 'xl' }} color="gray.300" lineHeight="1.8" maxW="700px">
+              {t.hero.description}
+            </Text>
+            <HStack spacing={4} flexWrap="wrap">
               <Button
+                as="a"
+                href={t.hero.brochureLink}
                 size="lg"
-                variant="outline"
-                borderColor="brand.500"
-                color="brand.500"
+                bg="brand.500"
+                color="black"
                 px={8}
                 py={6}
-                fontSize="md"
-                fontWeight="600"
-                _hover={{
-                  bg: "brand.500",
-                  color: "white",
-                  transform: "translateY(-2px)",
-                }}
+                fontWeight="700"
+                _hover={{ bg: 'brand.600', color: 'white', transform: 'translateY(-2px)' }}
                 transition="all 0.2s"
               >
-                {locale === 'en' ? 'View Our Projects' : '프로젝트 보기'}
+                {t.hero.brochure}
               </Button>
-            </Link>
-          </HStack>
-        </VStack>
+              <Link href={`/${locale}/contact`}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  borderColor="brand.500"
+                  color="brand.500"
+                  px={8}
+                  py={6}
+                  fontWeight="700"
+                  _hover={{ bg: 'brand.500', color: 'black', transform: 'translateY(-2px)' }}
+                  transition="all 0.2s"
+                >
+                  {t.hero.contact}
+                </Button>
+              </Link>
+            </HStack>
+          </VStack>
 
-        {/* Introduction of BNomad */}
-        <Box py={32} borderTop="1px" borderColor="dark.600">
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={16} alignItems="center">
-            <VStack align="flex-start" spacing={6}>
-              <Text
-                fontSize="sm"
-                color="brand.500"
-                fontWeight="600"
-                letterSpacing="wide"
-                textTransform="uppercase"
-              >
-                {locale === 'en' ? 'About BNomad' : 'BNomad 소개'}
-              </Text>
-              <Heading
-                as="h2"
-                fontSize={{ base: "3xl", md: "5xl" }}
-                fontWeight="bold"
-                color="white"
-                lineHeight="1.2"
-              >
-                {locale === 'en'
-                  ? 'Building Bridges Between Global Innovation and Local Wisdom'
-                  : '글로벌 혁신과 로컬 지혜를 잇는 다리'}
+          <Box
+            bg="linear-gradient(135deg, rgba(249,63,5,0.15), rgba(249,63,5,0.05))"
+            border="1px"
+            borderColor="dark.600"
+            borderRadius="2xl"
+            p={10}
+            shadow="xl"
+          >
+            <VStack align="stretch" spacing={6}>
+              {t.intro.stats.map((stat, idx) => (
+                <Box
+                  key={idx}
+                  p={4}
+                  borderRadius="lg"
+                  bg="rgba(255,255,255,0.04)"
+                  border="1px"
+                  borderColor="dark.600"
+                >
+                  <Text fontSize="4xl" fontWeight="800" color="brand.500">
+                    {stat.value}
+                  </Text>
+                  <Text color="gray.300" fontWeight="600">
+                    {stat.label}
+                  </Text>
+                </Box>
+              ))}
+            </VStack>
+          </Box>
+        </SimpleGrid>
+
+        {/* Introduction */}
+        <Box py={24} borderTop="1px" borderColor="dark.600">
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={12} alignItems="start">
+            <VStack align="flex-start" spacing={4}>
+              <Badge colorScheme="orange" bg="dark.800" color="brand.500" px={3} py={1} borderRadius="full">
+                {t.intro.eyebrow}
+              </Badge>
+              <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }} lineHeight="1.2">
+                {t.intro.title}
               </Heading>
             </VStack>
-
-            <VStack align="flex-start" spacing={6}>
-              <Text
-                fontSize="lg"
-                color="gray.400"
-                lineHeight="1.8"
-              >
-                {locale === 'en'
-                  ? 'BNomad is a venture studio dedicated to creating meaningful innovations that honor both global standards and local authenticity. We believe in the power of "glocal" thinking—combining the best of global perspectives with deep respect for local communities and traditions.'
-                  : 'BNomad는 글로벌 기준과 로컬 진정성을 모두 존중하는 의미 있는 혁신을 만드는 벤처 스튜디오입니다. 우리는 글로벌 관점의 장점과 로컬 커뮤니티 및 전통에 대한 깊은 존중을 결합한 "글로컬" 사고의 힘을 믿습니다.'}
-              </Text>
-              <Text
-                fontSize="lg"
-                color="gray.400"
-                lineHeight="1.8"
-              >
-                {locale === 'en'
-                  ? 'We operate from Jeju Island, Korea—a unique intersection of tradition and innovation. Our work spans venture building, educational programs, and community development, all grounded in authentic relationships and meaningful impact.'
-                  : '전통과 혁신이 교차하는 특별한 장소인 제주도에서 활동합니다. 벤처 빌딩, 교육 프로그램, 커뮤니티 개발을 아우르는 우리의 모든 작업은 진정한 관계와 의미 있는 영향력에 기반합니다.'}
-              </Text>
+            <VStack align="flex-start" spacing={4}>
+              {t.intro.body.map((paragraph, idx) => (
+                <Text key={idx} fontSize="lg" color="gray.300" lineHeight="1.8">
+                  {paragraph}
+                </Text>
+              ))}
+              <Link href={`/${locale}/team`}>
+                <Text color="brand.500" fontWeight="700" _hover={{ textDecoration: 'underline' }} cursor="pointer">
+                  {locale === 'en' ? 'Meet the crew →' : '팀 소개 보기 →'}
+                </Text>
+              </Link>
             </VStack>
           </SimpleGrid>
         </Box>
 
-        {/* Future Vision as Venture Studio */}
-        <Box py={32} borderTop="1px" borderColor="dark.600">
-          <VStack spacing={12} maxW="900px" mx="auto" textAlign="center">
-            <Box>
-              <Text
-                fontSize="sm"
-                color="brand.500"
-                fontWeight="600"
-                letterSpacing="wide"
-                textTransform="uppercase"
-                mb={4}
-              >
-                {locale === 'en' ? 'Our Vision' : '우리의 비전'}
-              </Text>
-              <Heading
-                as="h2"
-                fontSize={{ base: "3xl", md: "5xl" }}
-                fontWeight="bold"
-                color="white"
-                lineHeight="1.2"
-                mb={6}
-              >
-                {locale === 'en'
-                  ? 'Building the Future of Glocal Entrepreneurship'
-                  : '글로컬 기업가 정신의 미래를 건설합니다'}
-              </Heading>
-              <Text
-                fontSize="lg"
-                color="gray.400"
-                lineHeight="1.8"
-              >
-                {locale === 'en'
-                  ? 'As a venture studio, we envision a world where innovation serves communities, not just markets. We are creating a new model of venture building—one that values authenticity over scalability, relationships over transactions, and long-term impact over short-term gains.'
-                  : '벤처 스튜디오로서 우리는 혁신이 시장뿐만 아니라 커뮤니티를 위해 봉사하는 세상을 상상합니다. 확장성보다 진정성을, 거래보다 관계를, 단기 이익보다 장기 임팩트를 중요시하는 새로운 벤처 빌딩 모델을 만들고 있습니다.'}
-              </Text>
-            </Box>
-
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={12} w="full" pt={8}>
-              <VStack spacing={4}>
-                <Box
-                  w={16}
-                  h={16}
-                  bg="dark.800"
-                  border="2px"
-                  borderColor="brand.500"
-                  borderRadius="lg"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text fontSize="3xl">🌏</Text>
-                </Box>
-                <Heading as="h3" fontSize="xl" color="white">
-                  {locale === 'en' ? 'Glocal Focus' : '글로컬 중심'}
-                </Heading>
-                <Text fontSize="sm" color="gray.400" lineHeight="1.7">
-                  {locale === 'en'
-                    ? 'Bridging global innovation with local authenticity and wisdom'
-                    : '글로벌 혁신과 로컬 진정성 및 지혜를 연결'}
-                </Text>
-              </VStack>
-
-              <VStack spacing={4}>
-                <Box
-                  w={16}
-                  h={16}
-                  bg="dark.800"
-                  border="2px"
-                  borderColor="brand.500"
-                  borderRadius="lg"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text fontSize="3xl">🤝</Text>
-                </Box>
-                <Heading as="h3" fontSize="xl" color="white">
-                  {locale === 'en' ? 'Community First' : '커뮤니티 우선'}
-                </Heading>
-                <Text fontSize="sm" color="gray.400" lineHeight="1.7">
-                  {locale === 'en'
-                    ? 'Building ventures that strengthen communities and create lasting value'
-                    : '커뮤니티를 강화하고 지속 가능한 가치를 창출하는 벤처'}
-                </Text>
-              </VStack>
-
-              <VStack spacing={4}>
-                <Box
-                  w={16}
-                  h={16}
-                  bg="dark.800"
-                  border="2px"
-                  borderColor="brand.500"
-                  borderRadius="lg"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text fontSize="3xl">💡</Text>
-                </Box>
-                <Heading as="h3" fontSize="xl" color="white">
-                  {locale === 'en' ? 'Authentic Impact' : '진정한 임팩트'}
-                </Heading>
-                <Text fontSize="sm" color="gray.400" lineHeight="1.7">
-                  {locale === 'en'
-                    ? 'Measuring success by meaningful change, not just metrics'
-                    : '단순 지표가 아닌 의미 있는 변화로 성공 측정'}
-                </Text>
-              </VStack>
-            </SimpleGrid>
+        {/* Vision */}
+        <Box py={24} borderTop="1px" borderColor="dark.600">
+          <VStack align="flex-start" spacing={6} mb={10}>
+            <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
+              {t.vision.title}
+            </Heading>
+            <Text color="gray.400" maxW="760px">
+              {locale === 'en'
+                ? 'A glocal impact accelerator: inclusive, sustainable, and built together.'
+                : '포용적이고 지속가능한 글로컬 임팩트 액셀러레이터를 함께 만들어갑니다.'}
+            </Text>
           </VStack>
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+            {t.vision.items.map((item, idx) => (
+              <Box
+                key={idx}
+                p={6}
+                bg="dark.800"
+                border="1px"
+                borderColor="dark.600"
+                borderRadius="lg"
+                _hover={{ borderColor: 'brand.500', transform: 'translateY(-4px)' }}
+                transition="all 0.2s"
+              >
+                <Heading as="h3" fontSize="xl" mb={3}>
+                  {item.title}
+                </Heading>
+                <Text color="gray.400" lineHeight="1.7">
+                  {item.desc}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
         </Box>
 
-        {/* Team Photos */}
-        <Box py={32} borderTop="1px" borderColor="dark.600">
-          <VStack spacing={12}>
-            <Box textAlign="center">
-              <Text
-                fontSize="sm"
-                color="brand.500"
-                fontWeight="600"
-                letterSpacing="wide"
-                textTransform="uppercase"
-                mb={4}
-              >
-                {locale === 'en' ? 'Our Team' : '우리 팀'}
-              </Text>
-              <Heading
-                as="h2"
-                fontSize={{ base: "3xl", md: "5xl" }}
-                fontWeight="bold"
-                color="white"
-                lineHeight="1.2"
-              >
-                {locale === 'en' ? 'The People Behind BNomad' : 'BNomad를 만드는 사람들'}
-              </Heading>
-            </Box>
+        {/* Team Highlight */}
+        <Box py={24} borderTop="1px" borderColor="dark.600">
+          <VStack align="flex-start" spacing={4} mb={10}>
+            <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
+              {t.team.title}
+            </Heading>
+            <HStack spacing={3} flexWrap="wrap">
+              {t.team.mantra.map((line, idx) => (
+                <Badge
+                  key={idx}
+                  bg="dark.800"
+                  color="brand.500"
+                  px={4}
+                  py={2}
+                  borderRadius="full"
+                  fontSize="sm"
+                  border="1px"
+                  borderColor="dark.600"
+                >
+                  {line}
+                </Badge>
+              ))}
+            </HStack>
+          </VStack>
 
-            {/* Team Photo Grid */}
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            {t.team.photos.map((photo, idx) => (
               <Box
-                h="400px"
-                bg="dark.800"
-                border="1px"
-                borderColor="dark.600"
-                borderRadius="lg"
+                key={idx}
+                borderRadius="xl"
                 overflow="hidden"
                 position="relative"
-              >
-                <Box
-                  position="absolute"
-                  inset={0}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text color="gray.600" fontSize="sm">
-                    {locale === 'en' ? 'Team Photo 1' : '팀 사진 1'}
-                  </Text>
-                </Box>
-              </Box>
-              <Box
-                h="400px"
-                bg="dark.800"
-                border="1px"
-                borderColor="dark.600"
-                borderRadius="lg"
-                overflow="hidden"
-                position="relative"
-              >
-                <Box
-                  position="absolute"
-                  inset={0}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Text color="gray.600" fontSize="sm">
-                    {locale === 'en' ? 'Team Photo 2' : '팀 사진 2'}
-                  </Text>
-                </Box>
-              </Box>
-            </SimpleGrid>
-
-            <Link href={`/${locale}/team`}>
-              <Button
-                size="lg"
-                variant="outline"
-                borderColor="brand.500"
-                color="brand.500"
-                px={8}
-                py={6}
-                fontSize="md"
-                fontWeight="600"
-                _hover={{
-                  bg: "brand.500",
-                  color: "white",
-                  transform: "translateY(-2px)",
+                minH="320px"
+                bgImage={`url(${photo.image})`}
+                bgSize="cover"
+                bgPosition="center"
+                _after={{
+                  content: '""',
+                  position: 'absolute',
+                  inset: 0,
+                  bg: 'linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6))',
                 }}
-                transition="all 0.2s"
               >
-                {locale === 'en' ? 'Meet the Full Team →' : '팀 전체 만나기 →'}
-              </Button>
-            </Link>
+                <Box position="absolute" bottom={6} left={6} zIndex={1}>
+                  <Text fontSize="lg" fontWeight="700">
+                    {photo.title}
+                  </Text>
+                  <Text color="gray.300">{photo.subtitle}</Text>
+                </Box>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+
+        {/* Projects preview */}
+        <Box py={24} borderTop="1px" borderColor="dark.600">
+          <VStack align="flex-start" spacing={6} mb={10}>
+            <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
+              {t.projects.title}
+            </Heading>
+            <Text color="gray.400" maxW="760px">
+              {locale === 'en'
+                ? 'Key glocal programs and venture bridges we are running.'
+                : '현재 운영 중인 글로컬 프로그램과 벤처 브릿지를 소개합니다.'}
+            </Text>
           </VStack>
-        </Box>
-
-        {/* Team Mantra */}
-        <Box py={32} borderTop="1px" borderColor="dark.600">
-          <Box
-            maxW="900px"
-            mx="auto"
-            textAlign="center"
-            p={{ base: 8, md: 16 }}
-            bg="dark.800"
-            border="2px"
-            borderColor="brand.500"
-            borderRadius="2xl"
-          >
-            <Text
-              fontSize="sm"
-              color="brand.500"
-              fontWeight="600"
-              letterSpacing="wide"
-              textTransform="uppercase"
-              mb={8}
-            >
-              {locale === 'en' ? 'Our Mantra' : '우리의 만트라'}
-            </Text>
-            <Heading
-              as="h2"
-              fontSize={{ base: "2xl", md: "4xl" }}
-              fontWeight="bold"
-              color="white"
-              lineHeight="1.5"
-              mb={6}
-            >
-              {locale === 'en' ? (
-                <>
-                  "We don't just build ventures,
-                  <br />
-                  we <Text as="span" color="brand.500">cultivate ecosystems</Text> where
-                  <br />
-                  innovation and authenticity thrive together."
-                </>
-              ) : (
-                <>
-                  "우리는 단순히 벤처를 만드는 것이 아니라,
-                  <br />
-                  혁신과 진정성이 함께 번영하는{" "}
-                  <Text as="span" color="brand.500">생태계를 가꿉니다</Text>."
-                </>
-              )}
-            </Heading>
-            <Divider my={8} borderColor="dark.600" />
-            <Text fontSize="lg" color="gray.400" lineHeight="1.8">
-              {locale === 'en'
-                ? 'Every venture we build, every program we run, every connection we make is rooted in this belief: that the future of entrepreneurship is glocal, authentic, and deeply human.'
-                : '우리가 만드는 모든 벤처, 운영하는 모든 프로그램, 만드는 모든 연결은 이 믿음에 뿌리를 두고 있습니다: 기업가 정신의 미래는 글로컬하고 진정하며 깊이 인간적입니다.'}
-            </Text>
-          </Box>
-        </Box>
-
-        {/* CTA Section */}
-        <Box py={32} textAlign="center" borderTop="1px" borderColor="dark.600">
-          <VStack spacing={8}>
-            <Heading
-              as="h2"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              fontWeight="bold"
-              color="white"
-              maxW="800px"
-            >
-              {locale === 'en' ? 'Ready to Create Impact Together?' : '함께 임팩트를 만들 준비가 되셨나요?'}
-            </Heading>
-            <Text
-              fontSize="xl"
-              color="gray.400"
-              maxW="600px"
-            >
-              {locale === 'en'
-                ? "Let's explore how we can collaborate to bring your vision to life."
-                : '당신의 비전을 실현하기 위해 우리가 어떻게 협력할 수 있는지 함께 탐색해봅시다.'}
-            </Text>
-            <Link href={`/${locale}/contact`}>
-              <Button
-                size="lg"
-                bg="brand.500"
-                color="white"
-                px={12}
-                py={6}
-                fontSize="md"
-                fontWeight="600"
-                _hover={{ bg: "brand.600", transform: "translateY(-2px)" }}
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+            {projectCards.map((project: any, idx: number) => (
+              <Box
+                key={idx}
+                p={6}
+                bg="dark.800"
+                border="1px"
+                borderColor="dark.600"
+                borderRadius="lg"
+                _hover={{ borderColor: 'brand.500', transform: 'translateY(-4px)' }}
                 transition="all 0.2s"
+                h="full"
               >
-                {locale === 'en' ? 'Start a Conversation' : '대화 시작하기'}
+                <Badge colorScheme="orange" mb={3} px={3} py={1} borderRadius="md">
+                  {project.category}
+                </Badge>
+                <Heading as="h3" fontSize="xl" mb={2}>
+                  {project.title}
+                </Heading>
+                <Text color="brand.500" fontWeight="700" mb={3}>
+                  {project.tagline}
+                </Text>
+                <Text color="gray.400" fontSize="sm" lineHeight="1.7">
+                  {project.description}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+          <HStack justify="space-between" mt={8}>
+            <Link href={`/${locale}/projects`}>
+              <Button variant="link" color="brand.500" fontWeight="700">
+                {t.projects.cta} →
               </Button>
             </Link>
+            <Link href={`/${locale}/blog`}>
+              <Text color="gray.400" _hover={{ color: 'brand.500' }} cursor="pointer">
+                {locale === 'en' ? 'Read stories and updates' : '스토리와 소식을 읽어보세요'}
+              </Text>
+            </Link>
+          </HStack>
+        </Box>
+
+        {/* Collaboration CTA */}
+        <Box
+          py={20}
+          px={{ base: 6, md: 12 }}
+          bg="linear-gradient(120deg, rgba(249,63,5,0.15), rgba(249,63,5,0.05))"
+          border="1px"
+          borderColor="dark.600"
+          borderRadius="2xl"
+          textAlign="center"
+          mt={16}
+        >
+          <VStack spacing={6}>
+            <Heading as="h2" fontSize={{ base: '3xl', md: '4xl' }}>
+              {t.collab.title}
+            </Heading>
+            <Text color="gray.300" maxW="720px" fontSize="lg">
+              {t.collab.subtitle}
+            </Text>
+            <HStack spacing={4} justify="center">
+              <Link href={`/${locale}/contact`}>
+                <Button
+                  size="lg"
+                  bg="brand.500"
+                  color="black"
+                  px={10}
+                  py={6}
+                  fontWeight="700"
+                  _hover={{ bg: 'brand.600', color: 'white', transform: 'translateY(-2px)' }}
+                  transition="all 0.2s"
+                >
+                  {t.collab.button}
+                </Button>
+              </Link>
+              <Link href={`/${locale}/projects`}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  borderColor="brand.500"
+                  color="brand.500"
+                  px={10}
+                  py={6}
+                  fontWeight="700"
+                  _hover={{ bg: 'brand.500', color: 'black', transform: 'translateY(-2px)' }}
+                  transition="all 0.2s"
+                >
+                  {locale === 'en' ? 'Browse projects' : '프로젝트 살펴보기'}
+                </Button>
+              </Link>
+            </HStack>
           </VStack>
         </Box>
       </Container>

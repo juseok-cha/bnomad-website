@@ -99,30 +99,48 @@ export default function ContactPage() {
     <Box bg="black" minH="100vh" color="white">
       <Container maxW="1400px" px={{ base: 4, md: 8, lg: 12 }} py={32}>
         {/* Hero Section */}
-        <VStack spacing={6} align="flex-start" mb={20}>
-          <Text
-            fontSize="sm"
-            color="brand.500"
-            fontWeight="600"
-            letterSpacing="wide"
-            textTransform="uppercase"
-          >
-            {lang === 'en' ? 'Contact' : '문의'}
-          </Text>
-          <Heading
-            as="h1"
-            fontSize={{ base: "4xl", md: "6xl" }}
-            fontWeight="bold"
-            color="white"
-          >
-            {lang === 'en' ? 'Get in Touch' : '문의하기'}
-          </Heading>
-          <Text fontSize={{ base: "lg", md: "xl" }} color="gray.400" maxW="700px" lineHeight="1.8">
-            {lang === 'en'
-              ? "Have questions or want to collaborate? We'd love to hear from you."
-              : '질문이 있거나 협력을 원하시나요? 여러분의 이야기를 듣고 싶습니다.'}
-          </Text>
-        </VStack>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={12} mb={20} alignItems="center">
+          <VStack spacing={6} align="flex-start">
+            <Text
+              fontSize="sm"
+              color="brand.500"
+              fontWeight="600"
+              letterSpacing="wide"
+              textTransform="uppercase"
+            >
+              {lang === 'en' ? 'Contact' : '문의'}
+            </Text>
+            <Heading
+              as="h1"
+              fontSize={{ base: "4xl", md: "6xl" }}
+              fontWeight="bold"
+              color="white"
+            >
+              {lang === 'en' ? 'Get in Touch' : '문의하기'}
+            </Heading>
+            <Text fontSize={{ base: "lg", md: "xl" }} color="gray.400" maxW="700px" lineHeight="1.8">
+              {lang === 'en'
+                ? "Have questions or want to collaborate? We'd love to hear from you."
+                : '질문이 있거나 협력을 원하시나요? 여러분의 이야기를 듣고 싶습니다.'}
+            </Text>
+            <Text color="gray.500">
+              {lang === 'en'
+                ? 'We usually reply within 2 business days.'
+                : '영업일 기준 2일 이내로 답변드립니다.'}
+            </Text>
+          </VStack>
+
+          <Box
+            borderRadius="2xl"
+            overflow="hidden"
+            border="1px"
+            borderColor="dark.600"
+            bgImage="linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80)"
+            bgSize="cover"
+            bgPosition="center"
+            minH="320px"
+          />
+        </SimpleGrid>
 
         {/* Photo Section */}
         <Box mb={20}>

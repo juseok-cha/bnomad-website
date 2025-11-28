@@ -1,216 +1,220 @@
 {
   "en": {
     "hero": {
-      "title": "Our Team & Partners",
-      "subtitle": "The people and organizations making glocal innovation happen"
-    },
-    "teamSection": {
-      "title": "Core Team",
-      "description": "Meet the passionate individuals driving BNomad's mission forward."
-    },
-    "team": [
-      {
-        "name": "Team Member 1",
-        "role": "Co-Founder & Director",
-        "bio": "Passionate about bridging global innovation with local communities. 10+ years experience in social entrepreneurship and cooperative development.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member1@bnomad.io"
-      },
-      {
-        "name": "Team Member 2",
-        "role": "Programs Lead",
-        "bio": "Designs and facilitates transformative learning experiences. Background in experiential education and innovation facilitation.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member2@bnomad.io"
-      },
-      {
-        "name": "Team Member 3",
-        "role": "Community Manager",
-        "bio": "Builds and nurtures relationships with local and international partners. Expert in community organizing and network building.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member3@bnomad.io"
-      },
-      {
-        "name": "Team Member 4",
-        "role": "Operations & Strategy",
-        "bio": "Ensures smooth operations and strategic alignment. Background in venture building and organizational development.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member4@bnomad.io"
-      }
-    ],
-    "partnersSection": {
-      "title": "Our Partners",
-      "description": "We collaborate with leading organizations that share our vision for meaningful innovation."
-    },
-    "partners": [
-      {
-        "name": "Mondragon University",
-        "description": "Home of the LEINN program and pioneer in cooperative education. Our key partner in the Basque Country.",
-        "logo": "/images/partners/mondragon.png",
-        "website": "https://www.mondragon.edu",
-        "category": "Education"
-      },
-      {
-        "name": "Local Stitch",
-        "description": "Seoul-based community space and innovation hub. Partner for Lab Tours and local programs.",
-        "logo": "/images/partners/localstitch.png",
-        "website": "#",
-        "category": "Community Space"
-      },
-      {
-        "name": "MOA Community",
-        "description": "Network of social entrepreneurs and change-makers in Korea. Collaboration on community projects.",
-        "logo": "/images/partners/moa.png",
-        "website": "#",
-        "category": "Network"
-      },
-      {
-        "name": "Jeju Creative Economy Innovation Center",
-        "description": "Supporting innovation and entrepreneurship in Jeju. Local partner for programs and events.",
-        "logo": "/images/partners/jeju-center.png",
-        "website": "#",
-        "category": "Innovation Hub"
-      }
-    ],
-    "joinSection": {
-      "title": "Join Our Network",
-      "description": "We're always looking for passionate individuals and organizations to collaborate with.",
-      "buttons": {
-        "partner": "Become a Partner",
-        "join": "Join Our Team"
-      }
+      "title": "Team & Partners",
+      "subtitle": "The humans and allies behind BNomad",
+      "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "teamPhoto": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"
     },
     "values": {
-      "title": "What We Value",
+      "title": "Our value",
       "items": [
         {
-          "title": "Authenticity",
-          "description": "We bring our whole selves to our work and create spaces for others to do the same."
+          "title": "Local-first",
+          "description": "We listen to the community before we design or launch anything."
         },
         {
-          "title": "Collaboration",
-          "description": "We believe the best outcomes emerge from diverse perspectives working together."
+          "title": "Co-creation",
+          "description": "Partners, founders, and students build alongside us, not after us."
         },
         {
-          "title": "Learning",
-          "description": "We're continuous learners, always curious and open to new ideas and approaches."
+          "title": "Learning loops",
+          "description": "Rapid experiments, transparent reflections, and open toolkits."
         },
         {
-          "title": "Impact",
-          "description": "We measure success by the positive change we create in communities we work with."
+          "title": "Shared ownership",
+          "description": "We design models that keep value with the people who make it."
         }
       ]
+    },
+    "history": {
+      "title": "History",
+      "milestones": [
+        {
+          "year": "2021",
+          "title": "Founded in Jeju",
+          "description": "BNomad launches with Jeju Sehwa House and early ties to the Basque cooperative network."
+        },
+        {
+          "year": "2022",
+          "title": "Programs that travel",
+          "description": "Spain roadtrips with LEINNers, lab tours in Seoul, and maker exchanges take off."
+        },
+        {
+          "year": "2023-2024",
+          "title": "Glocal venture pipeline",
+          "description": "New venture tracks, deeper partnerships, and a growing bench of founders and coaches."
+        }
+      ],
+      "note": "We keep evolving our studio model through every cohort, partner sprint, and venture launch."
+    },
+    "coreTeam": [
+      {
+        "name": "Hyojin Lee",
+        "role": "Co-founder & Studio Lead",
+        "bio": "Builds bridges between Jeju and the Basque Country; focuses on cooperative venture design."
+      },
+      {
+        "name": "Ainara Ruiz",
+        "role": "Programs & Learning",
+        "bio": "Designs cross-cultural learning journeys and coaches teams through real market tests."
+      },
+      {
+        "name": "Minjae Park",
+        "role": "Community & Partnerships",
+        "bio": "Gathers local allies, mentors founders, and keeps our spaces vibrant and welcoming."
+      },
+      {
+        "name": "Soojin Choi",
+        "role": "Operations & Ops-Tech",
+        "bio": "Runs the studio heartbeat—tooling, data, and logistics that make ventures move."
+      }
+    ],
+    "partners": {
+      "global": [
+        {
+          "name": "Mondragon University / LEINN",
+          "description": "Cooperative entrepreneurship partner and home to our Spain roadtrips.",
+          "category": "Global"
+        },
+        {
+          "name": "International Innovation Labs",
+          "description": "Research and prototyping allies for glocal venture methodologies.",
+          "category": "Global"
+        }
+      ],
+      "local": [
+        {
+          "name": "Local Stitch",
+          "description": "Seoul-based innovation hub for lab tours and community showcases.",
+          "category": "Local"
+        },
+        {
+          "name": "MOA Community",
+          "description": "Network of social entrepreneurs collaborating on community projects.",
+          "category": "Local"
+        },
+        {
+          "name": "Jeju Creative Economy Innovation Center",
+          "description": "Home-field partner supporting pilots and events on the island.",
+          "category": "Local"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to build with us?",
+      "subtitle": "We welcome co-founders, faculty, and community partners who care about ventures with heart.",
+      "buttonPrimary": "Start a collaboration",
+      "buttonSecondary": "See programs"
     }
   },
   "ko": {
     "hero": {
       "title": "팀 & 파트너",
-      "subtitle": "글로컬 혁신을 만드는 사람들과 조직"
-    },
-    "teamSection": {
-      "title": "핵심 팀",
-      "description": "비노마드의 미션을 추진하는 열정적인 개인들을 만나보세요."
-    },
-    "team": [
-      {
-        "name": "팀 멤버 1",
-        "role": "공동 창립자 & 디렉터",
-        "bio": "글로벌 혁신과 로컬 커뮤니티를 연결하는 데 열정적입니다. 사회적 기업가 정신과 협동조합 개발 분야에서 10년 이상의 경험.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member1@bnomad.io"
-      },
-      {
-        "name": "팀 멤버 2",
-        "role": "프로그램 리드",
-        "bio": "변화를 만드는 학습 경험을 설계하고 촉진합니다. 경험 교육 및 혁신 촉진 배경.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member2@bnomad.io"
-      },
-      {
-        "name": "팀 멤버 3",
-        "role": "커뮤니티 매니저",
-        "bio": "로컬 및 국제 파트너와의 관계를 구축하고 육성합니다. 커뮤니티 조직화 및 네트워크 구축 전문가.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member3@bnomad.io"
-      },
-      {
-        "name": "팀 멤버 4",
-        "role": "운영 & 전략",
-        "bio": "원활한 운영과 전략적 정렬을 보장합니다. 벤처 구축 및 조직 개발 배경.",
-        "image": "/images/team/placeholder.jpg",
-        "linkedin": "#",
-        "email": "member4@bnomad.io"
-      }
-    ],
-    "partnersSection": {
-      "title": "파트너",
-      "description": "의미 있는 혁신에 대한 비전을 공유하는 선도적인 조직과 협력합니다."
-    },
-    "partners": [
-      {
-        "name": "몬드라곤 대학교",
-        "description": "LEINN 프로그램의 본거지이자 협동조합 교육의 선구자. 바스크 지역의 핵심 파트너.",
-        "logo": "/images/partners/mondragon.png",
-        "website": "https://www.mondragon.edu",
-        "category": "교육"
-      },
-      {
-        "name": "로컬 스티치",
-        "description": "서울 기반 커뮤니티 공간 및 혁신 허브. 랩 투어 및 로컬 프로그램 파트너.",
-        "logo": "/images/partners/localstitch.png",
-        "website": "#",
-        "category": "커뮤니티 공간"
-      },
-      {
-        "name": "MOA 커뮤니티",
-        "description": "한국의 사회적 기업가와 체인지메이커 네트워크. 커뮤니티 프로젝트 협업.",
-        "logo": "/images/partners/moa.png",
-        "website": "#",
-        "category": "네트워크"
-      },
-      {
-        "name": "제주 창조경제혁신센터",
-        "description": "제주의 혁신과 기업가 정신 지원. 프로그램 및 이벤트를 위한 로컬 파트너.",
-        "logo": "/images/partners/jeju-center.png",
-        "website": "#",
-        "category": "혁신 허브"
-      }
-    ],
-    "joinSection": {
-      "title": "네트워크에 참여하기",
-      "description": "협업할 열정적인 개인과 조직을 항상 찾고 있습니다.",
-      "buttons": {
-        "partner": "파트너 되기",
-        "join": "팀에 합류하기"
-      }
+      "subtitle": "비노마드를 함께 만드는 사람과 동료들",
+      "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "teamPhoto": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"
     },
     "values": {
-      "title": "우리의 가치",
+      "title": "Our value",
       "items": [
         {
-          "title": "진정성",
-          "description": "우리는 온전한 자신을 일에 가져오고 다른 사람들도 그렇게 할 수 있는 공간을 만듭니다."
+          "title": "로컬 우선",
+          "description": "무엇을 만들든 먼저 커뮤니티의 목소리를 듣습니다."
         },
         {
-          "title": "협력",
-          "description": "다양한 관점이 함께 일할 때 최고의 결과가 나온다고 믿습니다."
+          "title": "함께 만드는 과정",
+          "description": "파트너, 창업가, 학생이 우리와 나란히 만들어갑니다."
         },
         {
-          "title": "학습",
-          "description": "우리는 지속적인 학습자이며, 항상 새로운 아이디어와 접근 방식에 대해 호기심을 가지고 열려 있습니다."
+          "title": "학습 루프",
+          "description": "빠른 실험, 투명한 회고, 열린 툴킷을 반복합니다."
         },
         {
-          "title": "영향",
-          "description": "우리가 협력하는 커뮤니티에서 만드는 긍정적인 변화로 성공을 측정합니다."
+          "title": "공유된 소유",
+          "description": "가치를 만든 사람들이 가치를 나누는 모델을 설계합니다."
         }
       ]
+    },
+    "history": {
+      "title": "History",
+      "milestones": [
+        {
+          "year": "2021",
+          "title": "제주에서 시작",
+          "description": "제주 세화 하우스를 베이스로, 바스크 협동조합 네트워크와 연결을 시작했습니다."
+        },
+        {
+          "year": "2022",
+          "title": "여행하는 프로그램",
+          "description": "레이너와 함께한 스페인 로드트립, 서울 랩 투어, 메이커 교류가 본격화되었습니다."
+        },
+        {
+          "year": "2023-2024",
+          "title": "글로컬 벤처 파이프라인",
+          "description": "새로운 벤처 트랙, 깊어진 파트너십, 창업가와 코치 풀을 확장했습니다."
+        }
+      ],
+      "note": "매 코호트와 파트너 스프린트, 벤처 런치를 통해 스튜디오 모델을 계속 진화시킵니다."
+    },
+    "coreTeam": [
+      {
+        "name": "이효진",
+        "role": "공동 설립자 & 스튜디오 리드",
+        "bio": "제주와 바스크를 잇는 다리를 놓고 협동조합형 벤처 설계를 이끕니다."
+      },
+      {
+        "name": "아이나라 루이스",
+        "role": "프로그램 & 러닝",
+        "bio": "문화 간 러닝 여정을 설계하고 팀이 실제 시장 테스트를 하도록 코칭합니다."
+      },
+      {
+        "name": "박민재",
+        "role": "커뮤니티 & 파트너십",
+        "bio": "로컬 동료를 모으고 창업가를 멘토링하며 공간을 활기차게 유지합니다."
+      },
+      {
+        "name": "최수진",
+        "role": "오퍼레이션 & Ops-Tech",
+        "bio": "벤처가 움직이도록 도구, 데이터, 물류를 책임집니다."
+      }
+    ],
+    "partners": {
+      "global": [
+        {
+          "name": "몬드라곤 대학 / LEINN",
+          "description": "협동조합 기업가 정신 파트너이자 스페인 로드트립의 거점.",
+          "category": "Global"
+        },
+        {
+          "name": "국제 혁신 랩",
+          "description": "글로컬 벤처 방법론을 함께 연구·실험하는 동료들.",
+          "category": "Global"
+        }
+      ],
+      "local": [
+        {
+          "name": "로컬스티치",
+          "description": "랩 투어와 커뮤니티 쇼케이스를 함께 여는 서울 기반 혁신 허브.",
+          "category": "Local"
+        },
+        {
+          "name": "MOA 커뮤니티",
+          "description": "커뮤니티 프로젝트를 함께 만드는 사회적 기업가 네트워크.",
+          "category": "Local"
+        },
+        {
+          "name": "제주 창조경제혁신센터",
+          "description": "섬에서의 파일럿과 이벤트를 지원하는 든든한 로컬 파트너.",
+          "category": "Local"
+        }
+      ]
+    },
+    "cta": {
+      "title": "우리와 함께 만들까요?",
+      "subtitle": "진정성 있는 벤처에 관심 있는 공동 창업가, 교수진, 커뮤니티 파트너를 환영합니다.",
+      "buttonPrimary": "협업 시작하기",
+      "buttonSecondary": "프로그램 보기"
     }
   }
 }
