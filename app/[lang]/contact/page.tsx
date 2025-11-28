@@ -14,10 +14,7 @@ import {
   Textarea,
   Button,
   SimpleGrid,
-  Card,
-  CardBody,
   useToast,
-  useColorModeValue,
   Link as ChakraLink,
 } from '@chakra-ui/react'
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons'
@@ -99,47 +96,69 @@ export default function ContactPage() {
   }
 
   return (
-    <>
-      {/* Hero Section */}
-      <Box bg="brand.50" py={20}>
-        <Container maxW="container.xl">
-          <VStack spacing={4} textAlign="center">
-            <Heading size="2xl" color="brand.700">
-              {lang === 'en' ? 'Get in Touch' : '문의하기'}
-            </Heading>
-            <Text fontSize="xl" color="gray.700" maxW="2xl">
-              {lang === 'en'
-                ? "Have questions or want to collaborate? We'd love to hear from you."
-                : '질문이 있거나 협력을 원하시나요? 여러분의 이야기를 듣고 싶습니다.'}
-            </Text>
-          </VStack>
-        </Container>
-      </Box>
+    <Box bg="black" minH="100vh" color="white">
+      <Container maxW="1400px" px={{ base: 4, md: 8, lg: 12 }} py={32}>
+        {/* Hero Section */}
+        <VStack spacing={6} align="flex-start" mb={20}>
+          <Text
+            fontSize="sm"
+            color="brand.500"
+            fontWeight="600"
+            letterSpacing="wide"
+            textTransform="uppercase"
+          >
+            {lang === 'en' ? 'Contact' : '문의'}
+          </Text>
+          <Heading
+            as="h1"
+            fontSize={{ base: "4xl", md: "6xl" }}
+            fontWeight="bold"
+            color="white"
+          >
+            {lang === 'en' ? 'Get in Touch' : '문의하기'}
+          </Heading>
+          <Text fontSize={{ base: "lg", md: "xl" }} color="gray.400" maxW="700px" lineHeight="1.8">
+            {lang === 'en'
+              ? "Have questions or want to collaborate? We'd love to hear from you."
+              : '질문이 있거나 협력을 원하시나요? 여러분의 이야기를 듣고 싶습니다.'}
+          </Text>
+        </VStack>
 
-      <Container maxW="container.xl" py={16}>
-        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
           {/* Contact Form */}
           <Box>
-            <VStack spacing={6} align="stretch">
-              <Heading size="lg" color="brand.600">
+            <VStack spacing={8} align="stretch">
+              <Heading as="h2" fontSize="2xl" color="white">
                 {lang === 'en' ? 'Send us a message' : '메시지 보내기'}
               </Heading>
 
               <form onSubmit={handleSubmit}>
-                <VStack spacing={4} align="stretch">
+                <VStack spacing={6} align="stretch">
                   <FormControl isRequired>
-                    <FormLabel>{lang === 'en' ? 'Name' : '이름'}</FormLabel>
+                    <FormLabel color="gray.400" fontWeight="500">
+                      {lang === 'en' ? 'Name' : '이름'}
+                    </FormLabel>
                     <Input
                       value={formData.name}
                       onChange={(e) =>
                         setFormData((prev) => ({ ...prev, name: e.target.value }))
                       }
                       placeholder={lang === 'en' ? 'Your name' : '이름을 입력하세요'}
+                      bg="dark.800"
+                      border="1px"
+                      borderColor="dark.600"
+                      color="white"
+                      _placeholder={{ color: 'gray.500' }}
+                      _hover={{ borderColor: 'brand.500' }}
+                      _focus={{ borderColor: 'brand.500', boxShadow: '0 0 0 1px #F93F05' }}
+                      size="lg"
                     />
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel>{lang === 'en' ? 'Email' : '이메일'}</FormLabel>
+                    <FormLabel color="gray.400" fontWeight="500">
+                      {lang === 'en' ? 'Email' : '이메일'}
+                    </FormLabel>
                     <Input
                       type="email"
                       value={formData.email}
@@ -149,22 +168,42 @@ export default function ContactPage() {
                       placeholder={
                         lang === 'en' ? 'your@email.com' : '이메일을 입력하세요'
                       }
+                      bg="dark.800"
+                      border="1px"
+                      borderColor="dark.600"
+                      color="white"
+                      _placeholder={{ color: 'gray.500' }}
+                      _hover={{ borderColor: 'brand.500' }}
+                      _focus={{ borderColor: 'brand.500', boxShadow: '0 0 0 1px #F93F05' }}
+                      size="lg"
                     />
                   </FormControl>
 
                   <FormControl>
-                    <FormLabel>{lang === 'en' ? 'Subject' : '제목'}</FormLabel>
+                    <FormLabel color="gray.400" fontWeight="500">
+                      {lang === 'en' ? 'Subject' : '제목'}
+                    </FormLabel>
                     <Input
                       value={formData.subject}
                       onChange={(e) =>
                         setFormData((prev) => ({ ...prev, subject: e.target.value }))
                       }
                       placeholder={lang === 'en' ? 'Subject' : '제목을 입력하세요'}
+                      bg="dark.800"
+                      border="1px"
+                      borderColor="dark.600"
+                      color="white"
+                      _placeholder={{ color: 'gray.500' }}
+                      _hover={{ borderColor: 'brand.500' }}
+                      _focus={{ borderColor: 'brand.500', boxShadow: '0 0 0 1px #F93F05' }}
+                      size="lg"
                     />
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel>{lang === 'en' ? 'Message' : '메시지'}</FormLabel>
+                    <FormLabel color="gray.400" fontWeight="500">
+                      {lang === 'en' ? 'Message' : '메시지'}
+                    </FormLabel>
                     <Textarea
                       value={formData.message}
                       onChange={(e) =>
@@ -176,13 +215,28 @@ export default function ContactPage() {
                           : '문의 내용을 입력하세요...'
                       }
                       rows={6}
+                      bg="dark.800"
+                      border="1px"
+                      borderColor="dark.600"
+                      color="white"
+                      _placeholder={{ color: 'gray.500' }}
+                      _hover={{ borderColor: 'brand.500' }}
+                      _focus={{ borderColor: 'brand.500', boxShadow: '0 0 0 1px #F93F05' }}
+                      size="lg"
                     />
                   </FormControl>
 
                   <Button
                     type="submit"
-                    colorScheme="brand"
+                    bg="brand.500"
+                    color="white"
                     size="lg"
+                    px={12}
+                    py={6}
+                    fontSize="md"
+                    fontWeight="600"
+                    _hover={{ bg: 'brand.600', transform: 'translateY(-2px)' }}
+                    transition="all 0.2s"
                     isLoading={loading}
                     loadingText={lang === 'en' ? 'Sending...' : '전송 중...'}
                   >
@@ -194,80 +248,97 @@ export default function ContactPage() {
           </Box>
 
           {/* Contact Info */}
-          <VStack spacing={6} align="stretch">
-            <Heading size="lg" color="brand.600">
+          <VStack spacing={8} align="stretch">
+            <Heading as="h2" fontSize="2xl" color="white">
               {lang === 'en' ? 'Other ways to reach us' : '다른 연락 방법'}
             </Heading>
 
-            <Card bg={useColorModeValue('white', 'gray.800')} shadow="lg">
-              <CardBody>
-                <VStack align="start" spacing={4}>
-                  <HStack>
-                    <EmailIcon color="brand.600" boxSize={5} />
-                    <VStack align="start" spacing={0}>
-                      <Text fontWeight="semibold">
-                        {lang === 'en' ? 'Email' : '이메일'}
-                      </Text>
-                      <ChakraLink
-                        href="mailto:info@bnomad.co"
-                        color="brand.600"
-                        isExternal
-                      >
-                        info@bnomad.co
-                      </ChakraLink>
-                    </VStack>
-                  </HStack>
-                </VStack>
-              </CardBody>
-            </Card>
-
-            <Card bg={useColorModeValue('white', 'gray.800')} shadow="lg">
-              <CardBody>
-                <VStack align="start" spacing={4}>
-                  <Text fontWeight="semibold" fontSize="lg">
-                    {lang === 'en' ? 'Follow Us' : '팔로우하기'}
+            <Box
+              p={8}
+              bg="dark.800"
+              border="1px"
+              borderColor="dark.600"
+              borderRadius="lg"
+            >
+              <HStack spacing={4} align="start">
+                <EmailIcon color="brand.500" boxSize={6} mt={1} />
+                <VStack align="start" spacing={2}>
+                  <Text fontWeight="600" fontSize="lg" color="white">
+                    {lang === 'en' ? 'Email' : '이메일'}
                   </Text>
-                  <VStack align="start" spacing={3}>
-                    <ChakraLink
-                      href="https://instagram.com/bnomad.co"
-                      isExternal
-                      color="brand.600"
-                      display="flex"
-                      alignItems="center"
-                    >
-                      Instagram <ExternalLinkIcon ml={2} />
-                    </ChakraLink>
-                    <ChakraLink
-                      href="https://www.linkedin.com/company/bnomad-inc/?viewAsMember=true"
-                      isExternal
-                      color="brand.600"
-                      display="flex"
-                      alignItems="center"
-                    >
-                      LinkedIn <ExternalLinkIcon ml={2} />
-                    </ChakraLink>
-                  </VStack>
+                  <ChakraLink
+                    href="mailto:info@bnomad.co"
+                    color="brand.500"
+                    fontSize="lg"
+                    _hover={{ color: 'brand.400' }}
+                  >
+                    info@bnomad.co
+                  </ChakraLink>
                 </VStack>
-              </CardBody>
-            </Card>
+              </HStack>
+            </Box>
 
-            <Card bg="brand.50" shadow="lg">
-              <CardBody>
+            <Box
+              p={8}
+              bg="dark.800"
+              border="1px"
+              borderColor="dark.600"
+              borderRadius="lg"
+            >
+              <VStack align="start" spacing={4}>
+                <Text fontWeight="600" fontSize="lg" color="white">
+                  {lang === 'en' ? 'Follow Us' : '팔로우하기'}
+                </Text>
                 <VStack align="start" spacing={3}>
-                  <Heading size="md" color="brand.700">
-                    {lang === 'en' ? 'Jeju Sehwa House' : '제주 세화 하우스'}
-                  </Heading>
-                  <Text color="gray.700">
-                    {lang === 'en'
-                      ? 'Visit our home base in Jeju for programs and community events.'
-                      : '프로그램 및 커뮤니티 이벤트를 위해 제주에 있는 우리의 베이스캠프를 방문하세요.'}
-                  </Text>
+                  <ChakraLink
+                    href="https://instagram.com/bnomad.co"
+                    isExternal
+                    color="gray.400"
+                    fontSize="lg"
+                    display="flex"
+                    alignItems="center"
+                    _hover={{ color: 'brand.500' }}
+                    transition="color 0.2s"
+                  >
+                    Instagram <ExternalLinkIcon ml={2} />
+                  </ChakraLink>
+                  <ChakraLink
+                    href="https://www.linkedin.com/company/bnomad-inc/?viewAsMember=true"
+                    isExternal
+                    color="gray.400"
+                    fontSize="lg"
+                    display="flex"
+                    alignItems="center"
+                    _hover={{ color: 'brand.500' }}
+                    transition="color 0.2s"
+                  >
+                    LinkedIn <ExternalLinkIcon ml={2} />
+                  </ChakraLink>
                 </VStack>
-              </CardBody>
-            </Card>
+              </VStack>
+            </Box>
+
+            <Box
+              p={8}
+              bg="dark.800"
+              border="1px"
+              borderColor="brand.500"
+              borderRadius="lg"
+            >
+              <VStack align="start" spacing={3}>
+                <Heading as="h3" fontSize="xl" color="brand.500">
+                  {lang === 'en' ? 'Jeju Sehwa House' : '제주 세화 하우스'}
+                </Heading>
+                <Text color="gray.400" lineHeight="1.7">
+                  {lang === 'en'
+                    ? 'Visit our home base in Jeju for programs and community events.'
+                    : '프로그램 및 커뮤니티 이벤트를 위해 제주에 있는 우리의 베이스캠프를 방문하세요.'}
+                </Text>
+              </VStack>
+            </Box>
           </VStack>
         </SimpleGrid>
       </Container>
-    </>
+    </Box>
   )
 }
