@@ -2,7 +2,7 @@
   "en": {
     "hero": {
       "title": "Team & Partners",
-      "subtitle": "The humans and allies behind BNomad",
+      "subtitle": "Seoul–Jeju based glocal teampreneurship crew",
       "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
       "teamPhoto": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"
     },
@@ -10,20 +10,43 @@
       "title": "Our value",
       "items": [
         {
-          "title": "Local-first",
-          "description": "We listen to the community before we design or launch anything."
+          "title": "Shared values",
+          "description": "We align on intent and impact before we start."
         },
         {
-          "title": "Co-creation",
-          "description": "Partners, founders, and students build alongside us, not after us."
+          "title": "Vision alignment",
+          "description": "Every partnership moves the glocal mission forward."
         },
         {
-          "title": "Learning loops",
-          "description": "Rapid experiments, transparent reflections, and open toolkits."
+          "title": "Co-action",
+          "description": "We build and ship together—pilots, labs, and programs."
         },
         {
-          "title": "Shared ownership",
-          "description": "We design models that keep value with the people who make it."
+          "title": "Sustainable impact",
+          "description": "Long-term outcomes for people, place, and ventures."
+        }
+      ]
+    },
+    "mantra": {
+      "title": "Team mantra",
+      "tagline": "Be Nomad, Be Glocal ↗",
+      "items": [
+        "Learning through action—depth comes from doing.",
+        "Glocal thinking—wide global view, deep local insight.",
+        "Diversity and autonomy—respect perspectives, work with trust.",
+        "Teampreneurship—we challenge and grow as one team."
+      ]
+    },
+    "offices": {
+      "title": "Offices",
+      "locations": [
+        {
+          "name": "Seoul",
+          "description": "Konkuk University Smart Factory"
+        },
+        {
+          "name": "Jeju",
+          "description": "Sehwa local community workshop hub"
         }
       ]
     },
@@ -32,71 +55,106 @@
       "milestones": [
         {
           "year": "2021",
-          "title": "Founded in Jeju",
-          "description": "BNomad launches with Jeju Sehwa House and early ties to the Basque cooperative network."
+          "title": "Founded, identity set",
+          "description": "BNomad Inc. founded in Seoul & Jeju; identity as Glocal Innovation Builders; MTA teampreneurship philosophy introduced."
         },
         {
           "year": "2022",
-          "title": "Programs that travel",
-          "description": "Spain roadtrips with LEINNers, lab tours in Seoul, and maker exchanges take off."
+          "title": "Learning journeys start",
+          "description": "Built glocal learning-journey process and partner structure; connected Spain, Germany, India, Vietnam; hosted Mondragon LEINN."
         },
         {
-          "year": "2023-2024",
-          "title": "Glocal venture pipeline",
-          "description": "New venture tracks, deeper partnerships, and a growing bench of founders and coaches."
+          "year": "2023",
+          "title": "Glocal impact expansion",
+          "description": "Scaled global learning journeys; expanded Jeju Sehwa office as creative lab; joined KITA; started glocal impact consulting."
+        },
+        {
+          "year": "2024",
+          "title": "International expansion",
+          "description": "Launched startup outbound programs (Asia–EU bridge), on-site experiments, demo days; tied into South Summit Madrid, B.Ventures Bilbao, MWC Barcelona; grew university and municipal partnerships."
+        },
+        {
+          "year": "2025",
+          "title": "Future Forward",
+          "description": "Running multinational teams across Seoul Smart Factory and Jeju Sehwa; integrated education, innovation, consulting, and startup programs with TEAMLABS, TZBZ, MTA."
         }
       ],
       "note": "We keep evolving our studio model through every cohort, partner sprint, and venture launch."
     },
     "coreTeam": [
       {
-        "name": "Hyojin Lee",
-        "role": "Co-founder & Studio Lead",
-        "bio": "Builds bridges between Jeju and the Basque Country; focuses on cooperative venture design."
+        "name": "Rio",
+        "role": "CEO",
+        "bio": "Leads studio direction across Seoul and Jeju, connecting founders, partners, and ventures."
       },
       {
-        "name": "Ainara Ruiz",
-        "role": "Programs & Learning",
-        "bio": "Designs cross-cultural learning journeys and coaches teams through real market tests."
+        "name": "Emma",
+        "role": "Glocal Experience Designer",
+        "bio": "Designs programs that blend market research, culture, and teampreneur practice."
       },
       {
-        "name": "Minjae Park",
-        "role": "Community & Partnerships",
-        "bio": "Gathers local allies, mentors founders, and keeps our spaces vibrant and welcoming."
+        "name": "Cha",
+        "role": "International Program Manager",
+        "bio": "Orchestrates global cohorts, fieldwork, and partner coordination across countries."
       },
       {
-        "name": "Soojin Choi",
-        "role": "Operations & Ops-Tech",
-        "bio": "Runs the studio heartbeat—tooling, data, and logistics that make ventures move."
+        "name": "Juseok",
+        "role": "Open Innovation Operator",
+        "bio": "Runs startup bridges and open innovation sprints linking Asia and Europe."
+      },
+      {
+        "name": "Yujin",
+        "role": "Designer",
+        "bio": "Shapes visual systems, service flows, and storytelling for programs and ventures."
       }
     ],
     "partners": {
       "global": [
         {
-          "name": "Mondragon University / LEINN",
-          "description": "Cooperative entrepreneurship partner and home to our Spain roadtrips.",
+          "name": "Mondragon Team Academy (MTA)",
+          "description": "Global teampreneur community and core learning partner.",
           "category": "Global"
         },
         {
-          "name": "International Innovation Labs",
-          "description": "Research and prototyping allies for glocal venture methodologies.",
+          "name": "Travelling University",
+          "description": "Global learning and innovation partner.",
+          "category": "Global"
+        },
+        {
+          "name": "TEAMLABS / TZBZ / BerriUp",
+          "description": "European innovation labs and accelerators for pilots and venture bridges.",
+          "category": "Global"
+        },
+        {
+          "name": "Regional partners",
+          "description": "Spain, Vietnam, Philippines, Cambodia, and more.",
           "category": "Global"
         }
       ],
       "local": [
         {
-          "name": "Local Stitch",
-          "description": "Seoul-based innovation hub for lab tours and community showcases.",
+          "name": "Konkuk University",
+          "description": "Seoul base for smart factory collaboration.",
           "category": "Local"
         },
         {
-          "name": "MOA Community",
-          "description": "Network of social entrepreneurs collaborating on community projects.",
+          "name": "Gyeongsang National University",
+          "description": "Regional university partner for glocal programs.",
           "category": "Local"
         },
         {
-          "name": "Jeju Creative Economy Innovation Center",
-          "description": "Home-field partner supporting pilots and events on the island.",
+          "name": "University of Seoul",
+          "description": "Urban innovation collaborations and student ventures.",
+          "category": "Local"
+        },
+        {
+          "name": "Jeju National University",
+          "description": "Jeju-based academic partner supporting island pilots.",
+          "category": "Local"
+        },
+        {
+          "name": "Local innovation hubs & social venture communities",
+          "description": "Community networks that power open labs and projects.",
           "category": "Local"
         }
       ]
@@ -111,7 +169,7 @@
   "ko": {
     "hero": {
       "title": "팀 & 파트너",
-      "subtitle": "비노마드를 함께 만드는 사람과 동료들",
+      "subtitle": "서울·제주 기반 글로벌 팀프러너십 조직",
       "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
       "teamPhoto": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"
     },
@@ -119,20 +177,43 @@
       "title": "Our value",
       "items": [
         {
-          "title": "로컬 우선",
-          "description": "무엇을 만들든 먼저 커뮤니티의 목소리를 듣습니다."
+          "title": "공유 가치",
+          "description": "시작 전 의도와 임팩트에 먼저 합의합니다."
         },
         {
-          "title": "함께 만드는 과정",
-          "description": "파트너, 창업가, 학생이 우리와 나란히 만들어갑니다."
+          "title": "비전 정렬",
+          "description": "모든 파트너십이 글로컬 미션을 향합니다."
         },
         {
-          "title": "학습 루프",
-          "description": "빠른 실험, 투명한 회고, 열린 툴킷을 반복합니다."
+          "title": "공동 실천",
+          "description": "파일럿·랩·프로그램을 함께 만들고 실행합니다."
         },
         {
-          "title": "공유된 소유",
-          "description": "가치를 만든 사람들이 가치를 나누는 모델을 설계합니다."
+          "title": "지속가능한 임팩트",
+          "description": "사람·장소·벤처 모두에 오래 남는 결과를 지향합니다."
+        }
+      ]
+    },
+    "mantra": {
+      "title": "팀 만트라",
+      "tagline": "Be Nomad, Be Glocal ↗",
+      "items": [
+        "실행을 통한 배움 — 깊이는 직접 경험에서 나옵니다.",
+        "글로컬 사고 — 넓은 글로벌 시야와 깊은 로컬 통찰.",
+        "다양성과 자율성 — 관점을 존중하고 신뢰 기반으로 일합니다.",
+        "팀프러너십 — 창업가정신으로 하나의 팀처럼 도전하고 성장합니다."
+      ]
+    },
+    "offices": {
+      "title": "오피스",
+      "locations": [
+        {
+          "name": "서울",
+          "description": "건국대 스마트팩토리"
+        },
+        {
+          "name": "제주",
+          "description": "세화 로컬 커뮤니티 워크숍 거점"
         }
       ]
     },
@@ -141,71 +222,106 @@
       "milestones": [
         {
           "year": "2021",
-          "title": "제주에서 시작",
-          "description": "제주 세화 하우스를 베이스로, 바스크 협동조합 네트워크와 연결을 시작했습니다."
+          "title": "설립과 기반 구축",
+          "description": "비노마드 주식회사 설립(서울·제주), 글로컬 혁신 빌더 정체성 수립, MTA 팀프러너십 철학 도입."
         },
         {
           "year": "2022",
-          "title": "여행하는 프로그램",
-          "description": "레이너와 함께한 스페인 로드트립, 서울 랩 투어, 메이커 교류가 본격화되었습니다."
+          "title": "러닝저니 기반 글로컬 혁신 실험",
+          "description": "글로컬 러닝저니 프로세스와 파트너 구조 설계. 스페인·독일·인도·베트남 등 글로벌 파트너와 연결, Mondragon LEINN 정식 호스팅."
         },
         {
-          "year": "2023-2024",
-          "title": "글로컬 벤처 파이프라인",
-          "description": "새로운 벤처 트랙, 깊어진 파트너십, 창업가와 코치 풀을 확장했습니다."
+          "year": "2023",
+          "title": "본격 글로컬 임팩트 확장",
+          "description": "글로벌 러닝저니 운영 확대, 제주 세화 오피스 확장(창의·실험 공간), KITA 정회원 가입, 글로컬 임팩트 컨설팅 시작."
+        },
+        {
+          "year": "2024",
+          "title": "국제 확장과 생태계 구축",
+          "description": "스타트업 해외 진출 프로그램 런칭(아시아–EU 브릿지), 현장 실험·인터뷰·데모데이, South Summit Madrid/B.Ventures Bilbao/MWC Barcelona 연계, 대학·지자체·혁신허브 파트너십 확대."
+        },
+        {
+          "year": "2025",
+          "title": "Future Forward 단계",
+          "description": "서울 스마트팩토리와 제주 세화 기반 다국적 팀 운영. 교육·혁신·컨설팅·스타트업 프로그램 통합 운영, TEAMLABS·TZBZ·MTA 등과 프로젝트 확대."
         }
       ],
       "note": "매 코호트와 파트너 스프린트, 벤처 런치를 통해 스튜디오 모델을 계속 진화시킵니다."
     },
     "coreTeam": [
       {
-        "name": "이효진",
-        "role": "공동 설립자 & 스튜디오 리드",
-        "bio": "제주와 바스크를 잇는 다리를 놓고 협동조합형 벤처 설계를 이끕니다."
+        "name": "리오",
+        "role": "CEO",
+        "bio": "서울·제주 전반의 스튜디오 방향을 리드하며 창업가·파트너·벤처를 연결합니다."
       },
       {
-        "name": "아이나라 루이스",
-        "role": "프로그램 & 러닝",
-        "bio": "문화 간 러닝 여정을 설계하고 팀이 실제 시장 테스트를 하도록 코칭합니다."
+        "name": "엠마",
+        "role": "Glocal Experience Designer",
+        "bio": "시장 조사, 문화, 팀프러너십을 결합한 프로그램을 설계합니다."
       },
       {
-        "name": "박민재",
-        "role": "커뮤니티 & 파트너십",
-        "bio": "로컬 동료를 모으고 창업가를 멘토링하며 공간을 활기차게 유지합니다."
+        "name": "차",
+        "role": "International Program Manager",
+        "bio": "글로벌 코호트, 현장 활동, 국가 간 파트너 조율을 책임집니다."
       },
       {
-        "name": "최수진",
-        "role": "오퍼레이션 & Ops-Tech",
-        "bio": "벤처가 움직이도록 도구, 데이터, 물류를 책임집니다."
+        "name": "주석",
+        "role": "Open Innovation Operator",
+        "bio": "아시아–유럽을 잇는 스타트업 브릿지와 오픈 이노베이션 스프린트를 운영합니다."
+      },
+      {
+        "name": "유진",
+        "role": "디자이너",
+        "bio": "프로그램·벤처의 비주얼, 서비스 플로우, 스토리텔링을 다룹니다."
       }
     ],
     "partners": {
       "global": [
         {
-          "name": "몬드라곤 대학 / LEINN",
-          "description": "협동조합 기업가 정신 파트너이자 스페인 로드트립의 거점.",
+          "name": "Mondragon Team Academy (MTA)",
+          "description": "글로벌 팀프러너 커뮤니티이자 핵심 러닝 파트너.",
           "category": "Global"
         },
         {
-          "name": "국제 혁신 랩",
-          "description": "글로컬 벤처 방법론을 함께 연구·실험하는 동료들.",
+          "name": "Travelling University",
+          "description": "글로벌 학습·혁신 파트너.",
+          "category": "Global"
+        },
+        {
+          "name": "TEAMLABS / TZBZ / BerriUp",
+          "description": "유럽 혁신 랩·액셀러레이터로 파일럿과 브릿지를 함께 만듭니다.",
+          "category": "Global"
+        },
+        {
+          "name": "해외 지역 파트너",
+          "description": "스페인, 베트남, 필리핀, 캄보디아 등 글로벌 현장 파트너.",
           "category": "Global"
         }
       ],
       "local": [
         {
-          "name": "로컬스티치",
-          "description": "랩 투어와 커뮤니티 쇼케이스를 함께 여는 서울 기반 혁신 허브.",
+          "name": "건국대학교",
+          "description": "스마트팩토리를 기반으로 한 서울 거점.",
           "category": "Local"
         },
         {
-          "name": "MOA 커뮤니티",
-          "description": "커뮤니티 프로젝트를 함께 만드는 사회적 기업가 네트워크.",
+          "name": "경상국립대학교",
+          "description": "글로컬 프로그램을 함께 설계하는 지역 대학 파트너.",
           "category": "Local"
         },
         {
-          "name": "제주 창조경제혁신센터",
-          "description": "섬에서의 파일럿과 이벤트를 지원하는 든든한 로컬 파트너.",
+          "name": "서울시립대학교",
+          "description": "도시 혁신 협업과 학생 벤처를 함께 합니다.",
+          "category": "Local"
+        },
+        {
+          "name": "제주대학교",
+          "description": "제주 파일럿을 지원하는 학술 파트너.",
+          "category": "Local"
+        },
+        {
+          "name": "로컬 혁신 허브 및 소셜벤처 커뮤니티",
+          "description": "오픈랩과 프로젝트를 함께 만드는 커뮤니티 네트워크.",
           "category": "Local"
         }
       ]

@@ -23,24 +23,29 @@ export default function ProjectsPage() {
 
   const projectsList = [
     {
-      key: 'openWaste',
-      ...content.projects.openWaste,
-      icon: '♻️',
+      key: 'teampreneur',
+      ...content.projects.teampreneur,
+      icon: '🌏',
     },
     {
-      key: 'politico',
-      ...content.projects.politico,
-      icon: '🗳️',
+      key: 'learningJourney',
+      ...content.projects.learningJourney,
+      icon: '✈️',
     },
     {
-      key: 'beeModel',
-      ...content.projects.beeModel,
-      icon: '🐝',
+      key: 'openLab',
+      ...content.projects.openLab,
+      icon: '🧪',
     },
     {
-      key: 'glocalLab',
-      ...content.projects.glocalLab,
-      icon: '🔬',
+      key: 'impactConsulting',
+      ...content.projects.impactConsulting,
+      icon: '🌱',
+    },
+    {
+      key: 'asiaEuBridge',
+      ...content.projects.asiaEuBridge,
+      icon: '🌐',
     },
   ]
 
