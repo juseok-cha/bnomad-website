@@ -124,6 +124,38 @@ export default function ContactPage() {
           </Text>
         </VStack>
 
+        {/* Photo Section */}
+        <Box mb={20}>
+          <Box
+            w="full"
+            h={{ base: "300px", md: "500px" }}
+            bg="dark.800"
+            border="1px"
+            borderColor="dark.600"
+            borderRadius="2xl"
+            overflow="hidden"
+            position="relative"
+          >
+            <Box
+              position="absolute"
+              inset={0}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              flexDirection="column"
+              gap={4}
+            >
+              <Text fontSize="5xl">🏝️</Text>
+              <Text color="gray.600" fontSize="lg" fontWeight="600">
+                {lang === 'en' ? 'Jeju Sehwa House' : '제주 세화 하우스'}
+              </Text>
+              <Text color="gray.700" fontSize="sm">
+                {lang === 'en' ? '(Photo placeholder)' : '(사진 자리)'}
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
           {/* Contact Form */}
           <Box>
