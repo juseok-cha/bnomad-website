@@ -13,6 +13,7 @@ import {
   Timestamp,
 } from 'firebase/firestore'
 import { db } from './config'
+import { sampleBlogPost } from '@/lib/data/sampleBlogPost'
 import { BlogPost, BlogPostInput } from '@/lib/types/blog'
 
 const BLOG_COLLECTION = 'blogPosts'
@@ -40,7 +41,7 @@ export async function getPublishedPosts(
     )
 
     const querySnapshot = await getDocs(q)
-    return querySnapshot.docs.map((doc) => {
+    const posts = querySnapshot.docs.map((doc) => {
       const data = doc.data()
       return {
         id: doc.id,
@@ -50,9 +51,11 @@ export async function getPublishedPosts(
         updatedAt: convertTimestamp(data.updatedAt),
       } as BlogPost
     })
+
+    return posts.length > 0 ? posts : [sampleBlogPost]
   } catch (error) {
     console.error('Error fetching published posts:', error)
-    return []
+    return [sampleBlogPost]
   }
 }
 
@@ -69,7 +72,7 @@ export async function getFeaturedPosts(limitCount: number = 3): Promise<BlogPost
     )
 
     const querySnapshot = await getDocs(q)
-    return querySnapshot.docs.map((doc) => {
+    const posts = querySnapshot.docs.map((doc) => {
       const data = doc.data()
       return {
         id: doc.id,
@@ -79,9 +82,11 @@ export async function getFeaturedPosts(limitCount: number = 3): Promise<BlogPost
         updatedAt: convertTimestamp(data.updatedAt),
       } as BlogPost
     })
+
+    return posts.length > 0 ? posts : [sampleBlogPost]
   } catch (error) {
     console.error('Error fetching featured posts:', error)
-    return []
+    return [sampleBlogPost]
   }
 }
 
@@ -93,7 +98,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
     const querySnapshot = await getDocs(q)
     if (querySnapshot.empty) {
-      return null
+      return slug === sampleBlogPost.slug ? sampleBlogPost : null
     }
 
     const doc = querySnapshot.docs[0]
@@ -107,7 +112,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     } as BlogPost
   } catch (error) {
     console.error('Error fetching post by slug:', error)
-    return null
+    return slug === sampleBlogPost.slug ? sampleBlogPost : null
   }
 }
 
