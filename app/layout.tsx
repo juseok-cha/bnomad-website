@@ -13,6 +13,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="BNOMAD Blog (English)"
+          href="/rss.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="BNOMAD 블로그 (한국어)"
+          href="/rss-ko.xml"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { isLocale, type Locale } from '@/lib/i18n/dictionaries'
+import { isLocale, type SupportedLang } from '@/lib/i18n/localeUtils'
 import {
   Box,
   Container,
@@ -170,7 +170,7 @@ const copy = {
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
-  const fallbackLocale: Locale = 'en'
+  const fallbackLocale: SupportedLang = 'en'
   const locale = isLocale(lang) ? lang : fallbackLocale
   const t = copy[locale]
   const projects = projectsContent[locale].projects

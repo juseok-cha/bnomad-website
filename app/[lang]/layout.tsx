@@ -1,9 +1,9 @@
 import { Providers } from "../providers";
 import {
   getDictionary,
-  isLocale,
   type Locale,
 } from "@/lib/i18n/dictionaries";
+import { isLocale } from "@/lib/i18n/localeUtils";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 

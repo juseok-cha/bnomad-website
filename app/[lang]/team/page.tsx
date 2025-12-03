@@ -1,6 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation'
+import { isLocale } from '@/lib/i18n/localeUtils'
 import Link from 'next/link'
 import {
   Box,
@@ -17,7 +18,8 @@ import teamContent from '@/lib/i18n/locales/team.json'
 
 export default function TeamPage() {
   const params = useParams()
-  const lang = (params?.lang as 'en' | 'ko') || 'en'
+  const langParam = params?.lang as string
+  const lang = isLocale(langParam) ? langParam : 'en'
   const content = teamContent[lang]
 
   return (

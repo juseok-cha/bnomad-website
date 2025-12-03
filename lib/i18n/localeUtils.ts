@@ -2,6 +2,9 @@ const supportedLangs = ['en', 'ko'] as const
 
 export type SupportedLang = (typeof supportedLangs)[number]
 
+export const isLocale = (value: string): value is SupportedLang =>
+  supportedLangs.includes(value as SupportedLang)
+
 /**
  * Normalizes a lang parameter that may contain undefined or nested paths.
  */

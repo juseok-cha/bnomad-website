@@ -1,11 +1,6 @@
-import 'server-only'
-
 export const locales = ['en', 'ko'] as const
 
 export type Locale = (typeof locales)[number]
-
-export const isLocale = (value: string): value is Locale =>
-  (locales as readonly string[]).includes(value)
 
 const dictionaries: Record<Locale, () => Promise<Record<string, unknown>>> = {
   en: () => import('./locales/en.json').then((module) => module.default),
