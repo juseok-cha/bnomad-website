@@ -24,7 +24,7 @@ export default function AdminLayout({ children, lang }: AdminLayoutProps) {
   if (loading) {
     return (
       <Container maxW="container.xl" py={20}>
-        <VStack spacing={4}>
+        <VStack spacing={4} color="white">
           <Spinner size="xl" color="brand.500" />
           <Text>Loading...</Text>
         </VStack>
@@ -37,9 +37,9 @@ export default function AdminLayout({ children, lang }: AdminLayoutProps) {
   }
 
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" bg="black" color="white">
       <AdminSidebar lang={lang} />
-      <Box ml="260px" minH="100vh" bg="gray.50">
+      <Box ml="260px" minH="100vh" bg="dark.900" color="white" borderLeft="1px" borderColor="dark.700">
         {children}
       </Box>
     </Box>

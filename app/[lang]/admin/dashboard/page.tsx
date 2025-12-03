@@ -111,11 +111,11 @@ export default function AdminDashboard() {
   }
 
   const StatCard = ({ label, value, icon, color, helpText }: any) => (
-    <Box bg="white" p={6} borderRadius="lg" shadow="sm" borderWidth="1px">
+    <Box bg="dark.800" p={6} borderRadius="lg" borderWidth="1px" borderColor="dark.600">
       <Stat>
         <Flex justify="space-between" align="flex-start">
           <Box>
-            <StatLabel color="gray.600" fontSize="sm" fontWeight="medium">
+            <StatLabel color="gray.400" fontSize="sm" fontWeight="medium">
               {label}
             </StatLabel>
             <StatNumber fontSize="3xl" fontWeight="bold" color={color} mt={2}>
@@ -127,7 +127,7 @@ export default function AdminDashboard() {
               </StatHelpText>
             )}
           </Box>
-          <Icon as={icon} boxSize={8} color={color} opacity={0.8} />
+          <Icon as={icon} boxSize={8} color={color} opacity={0.9} />
         </Flex>
       </Stat>
     </Box>
@@ -141,13 +141,15 @@ export default function AdminDashboard() {
           <Flex justify="space-between" align="center">
             <Box>
               <Heading size="xl" mb={2}>Dashboard</Heading>
-              <Text color="gray.600">Welcome back! Here's your overview.</Text>
+              <Text color="gray.400">Welcome back! Here's your overview.</Text>
             </Box>
             <Button
               leftIcon={<AddIcon />}
-              colorScheme="brand"
+              bg="brand.500"
+              color="black"
               size="lg"
               onClick={() => router.push(`/${lang}/admin/posts/new`)}
+              _hover={{ bg: 'brand.600', color: 'white' }}
             >
               New Post
             </Button>
@@ -188,9 +190,9 @@ export default function AdminDashboard() {
           {/* Recent Posts */}
           <Box>
             <Heading size="md" mb={4}>Recent Posts</Heading>
-            <Box bg="white" rounded="lg" shadow="sm" overflow="hidden" borderWidth="1px">
-              <Table variant="simple">
-                <Thead bg="gray.50">
+            <Box bg="dark.800" rounded="lg" overflow="hidden" borderWidth="1px" borderColor="dark.600">
+              <Table variant="simple" colorScheme="gray">
+                <Thead bg="dark.700">
                   <Tr>
                     <Th>Title (EN)</Th>
                     <Th>Category</Th>
@@ -211,16 +213,18 @@ export default function AdminDashboard() {
                     <Tr>
                       <Td colSpan={6} textAlign="center" py={10}>
                         <VStack spacing={3}>
-                          <Icon as={ChatIcon} boxSize={12} color="gray.300" />
-                          <Text color="gray.500" fontWeight="medium">
+                          <Icon as={ChatIcon} boxSize={12} color="gray.500" />
+                          <Text color="gray.300" fontWeight="medium">
                             No posts yet
                           </Text>
-                          <Text fontSize="sm" color="gray.400">
+                          <Text fontSize="sm" color="gray.500">
                             Create your first blog post to get started!
                           </Text>
                           <Button
                             size="sm"
-                            colorScheme="brand"
+                            bg="brand.500"
+                            color="black"
+                            _hover={{ bg: 'brand.600', color: 'white' }}
                             onClick={() => router.push(`/${lang}/admin/posts/new`)}
                           >
                             Create Post
@@ -230,8 +234,8 @@ export default function AdminDashboard() {
                     </Tr>
                   ) : (
                     posts.slice(0, 10).map((post) => (
-                      <Tr key={post.id} _hover={{ bg: 'gray.50' }}>
-                        <Td fontWeight="medium">{post.title.en}</Td>
+                      <Tr key={post.id} _hover={{ bg: 'dark.700' }}>
+                        <Td fontWeight="medium" color="white">{post.title.en}</Td>
                         <Td>
                           <Badge colorScheme="purple">{post.category}</Badge>
                         </Td>
@@ -243,7 +247,7 @@ export default function AdminDashboard() {
                         <Td>
                           {post.featured && <Badge colorScheme="yellow">Featured</Badge>}
                         </Td>
-                        <Td fontSize="sm" color="gray.600">
+                        <Td fontSize="sm" color="gray.400">
                           {post.publishedAt
                             ? new Date(post.publishedAt).toLocaleDateString()
                             : '-'}
@@ -254,8 +258,8 @@ export default function AdminDashboard() {
                               aria-label="Edit post"
                               icon={<EditIcon />}
                               size="sm"
-                              colorScheme="blue"
                               variant="ghost"
+                              color="blue.300"
                               onClick={() =>
                                 router.push(`/${lang}/admin/posts/${post.id}`)
                               }
@@ -264,8 +268,8 @@ export default function AdminDashboard() {
                               aria-label="Delete post"
                               icon={<DeleteIcon />}
                               size="sm"
-                              colorScheme="red"
                               variant="ghost"
+                              color="red.300"
                               onClick={() => handleDelete(post.id)}
                             />
                           </HStack>
@@ -281,6 +285,9 @@ export default function AdminDashboard() {
               <Flex justify="center" mt={4}>
                 <Button
                   variant="outline"
+                  borderColor="dark.600"
+                  color="gray.200"
+                  _hover={{ bg: 'dark.700', borderColor: 'brand.500', color: 'white' }}
                   onClick={() => router.push(`/${lang}/admin/posts`)}
                 >
                   View All Posts ({posts.length})

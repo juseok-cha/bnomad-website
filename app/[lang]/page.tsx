@@ -168,8 +168,8 @@ const copy = {
   },
 }
 
-export default async function Home({ params }: { params: { lang: string } }) {
-  const { lang } = params
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
   const fallbackLocale: Locale = 'en'
   const locale = isLocale(lang) ? lang : fallbackLocale
   const t = copy[locale]
