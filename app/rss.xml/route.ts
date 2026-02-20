@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getPublishedPosts } from '@/lib/firebase/blogService'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     const posts = await getPublishedPosts('en', 50)
