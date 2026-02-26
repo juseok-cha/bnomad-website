@@ -8,7 +8,7 @@ Official website for BNomad - Venture Studio for Glocal Innovation with Soul and
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + Chakra UI
 - **Backend**: Firebase (Auth, Firestore, Storage)
-- **Hosting**: Netlify
+- **Hosting**: Vercel
 - **Internationalization**: Route-based i18n (English & Korean)
 
 ## 📁 Project Structure
@@ -149,15 +149,19 @@ The website includes a full-featured blog admin system with authentication:
 
 ## 🚀 Deployment
 
-### Netlify Deployment
+### Vercel Deployment
 
 1. Push your code to GitHub
-2. Connect your repository to Netlify
-3. Configure build settings:
-   - Build command: `npm run build`
-   - Publish directory: `.next`
-4. Add environment variables in Netlify dashboard (same as `.env`)
-5. Deploy!
+2. Go to [vercel.com](https://vercel.com/) and sign in with GitHub
+3. Click "Add New..." → "Project" and import your repository
+4. Configure build settings:
+   - Framework Preset: Next.js (auto-detected)
+   - Build Command: `npm run build` (auto-detected)
+   - Install Command: `npm install --legacy-peer-deps`
+5. Add environment variables in Vercel dashboard:
+   - Copy all Firebase config variables from `.env.local`
+   - Set them in Settings → Environment Variables
+6. Deploy! Your site will be live at `https://your-project.vercel.app`
 
 ## 🤝 GitHub Workflow
 
@@ -166,10 +170,6 @@ The website includes a full-featured blog admin system with authentication:
 - **Pull before pushing**: `git pull --rebase origin main` to keep your branch up to date.
 - **Open a PR**: push the branch to GitHub and open a pull request targeting `main`.
 - **Code review**: incorporate feedback, ensure checks pass, and then merge via GitHub.
-
-### Netlify Plugin
-
-The project uses `@netlify/plugin-nextjs` for optimal Next.js deployment.
 
 ## 🎨 Customization
 

@@ -187,4 +187,4 @@ Once logged in, you can:
 2. ✅ Create a test blog post
 3. ✅ Verify the blog post appears on the public blog page
 4. ✅ Test the contact form
-5. 🚀 Deploy to Netlify (add environment variables there too!)
+5. 🚀 Deploy to Vercel (add environment variables there too!)
