@@ -1,23 +1,8 @@
 [build]
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "20"
-
-# Redirects for i18n
-[[redirects]]
-  from = "/*"
-  to = "/en/:splat"
-  status = 200
-  force = false
-  conditions = {Language = ["en"]}
-
-[[redirects]]
-  from = "/*"
-  to = "/ko/:splat"
-  status = 200
-  force = false
-  conditions = {Language = ["ko"]}
