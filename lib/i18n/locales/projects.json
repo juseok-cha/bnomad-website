@@ -1,0 +1,226 @@
+{
+  "en": {
+    "hero": {
+      "title": "Our Projects",
+      "subtitle": "Glocal innovation programs and venture bridges"
+    },
+    "overview": {
+      "description": "From teampreneur education to Asia–EU startup bridges, we design glocal programs, labs, and consulting that move people, ventures, and regions forward."
+    },
+    "projects": {
+      "teampreneur": {
+        "title": "Glocal Teampreneur Education",
+        "tagline": "Hands-on project education with global teammates solving local challenges",
+        "category": "Education",
+        "description": "Team-based entrepreneurship programs rooted in Korean universities and communities, co-building with global peers to strengthen venture capability.",
+        "challenge": "Students and local teams need real projects and diverse collaborators to build venture-ready skills.",
+        "solution": "Multinational squads tackle local briefs, guided by teampreneur coaches and community mentors.",
+        "impact": [
+          "Practical venture capacity for student and community teams",
+          "Local challenges addressed with global perspectives"
+        ],
+        "partners": [
+          "Universities",
+          "Local innovation hubs",
+          "Community organizations"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "learningJourney": {
+        "title": "Learning Journey Program",
+        "tagline": "Immersive global journeys for research, visits, and culture-grounded learning",
+        "category": "Immersive Learning",
+        "description": "Market research, company visits, cultural immersions, and field experience in Spain, India, Germany, Vietnam, and beyond.",
+        "challenge": "Teams need in-context learning to design offerings that work across markets.",
+        "solution": "Cohorts travel with curated agendas—interviews, labs, and reflection to convert insight into action.",
+        "impact": [
+          "Cultural fluency and rapid market insight",
+          "Networks activated across multiple countries"
+        ],
+        "partners": [
+          "Mondragon Team Academy",
+          "Travelling University",
+          "Regional hosts across Spain, India, Germany, Vietnam"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "openLab": {
+        "title": "Global Open Lab",
+        "tagline": "Open labs with municipalities, universities, enterprises, and cultural partners",
+        "category": "Open Lab",
+        "description": "Co-creating inclusive, sustainable glocal solutions with local partners across government, academia, culture, and environment.",
+        "challenge": "Complex local issues need open collaboration between diverse actors.",
+        "solution": "Set up labs that prototype with citizens, students, and practitioners; share playbooks and pilots.",
+        "impact": [
+          "Joint pilots with public, private, and civic partners",
+          "Reusable open-lab toolkits and tested prototypes"
+        ],
+        "partners": [
+          "Municipalities",
+          "Universities",
+          "Enterprises",
+          "Cultural and environmental orgs"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "impactConsulting": {
+        "title": "Global Impact Consulting",
+        "tagline": "Designing impact projects with local organizations ready to grow globally",
+        "category": "Impact Consulting",
+        "description": "Work with local institutions and shops to architect impact programs that stand on global standards and local depth.",
+        "challenge": "Local organizations need global perspective to scale impact without losing roots.",
+        "solution": "Impact strategy, venture design, and capacity building with international benchmarks.",
+        "impact": [
+          "Localized strategies aligned to global best practices",
+          "Teams equipped to deliver measurable impact"
+        ],
+        "partners": [
+          "Local governments",
+          "Universities",
+          "Social ventures"
+        ],
+        "status": "Active",
+        "website": "#"
+      },
+      "asiaEuBridge": {
+        "title": "Startup Bridge Asia–EU",
+        "tagline": "Connecting Korean startups with European corporates and ecosystems",
+        "category": "Open Innovation",
+        "description": "International collaboration program with open innovation, on-site interviews, demo days, and event tie-ins (B.Ventures Bilbao, South Summit Madrid, MWC Barcelona).",
+        "challenge": "Startups need trusted pathways to validate and partner in new markets.",
+        "solution": "Curated matches, field immersion, and stage-ready demos with European partners.",
+        "impact": [
+          "Cross-border pilots and partnerships",
+          "Market-ready narratives built with local insight"
+        ],
+        "partners": [
+          "European accelerators (TEAMLABS, TZBZ, BerriUp)",
+          "Corporate partners",
+          "Event platforms"
+        ],
+        "status": "Active",
+        "website": "#"
+      }
+    },
+    "cta": {
+      "title": "Want to Collaborate?",
+      "description": "We're always open to partnerships and collaborations on meaningful projects.",
+      "button": "Get in Touch"
+    }
+  },
+  "ko": {
+    "hero": {
+      "title": "프로젝트",
+      "subtitle": "글로컬 혁신 프로그램과 벤처 브릿지"
+    },
+    "overview": {
+      "description": "팀프러너 교육부터 아시아–EU 스타트업 브릿지까지, 사람·벤처·지역을 잇는 글로컬 프로그램, 랩, 컨설팅을 설계합니다."
+    },
+    "projects": {
+      "teampreneur": {
+        "title": "글로컬 팀프러너 교육",
+        "tagline": "글로벌 팀과 함께 로컬 과제를 해결하는 실천형 창업 교육",
+        "category": "교육",
+        "description": "한국 대학·지역 커뮤니티 기반 팀 창업 프로그램. 글로벌 인재와 함께 로컬 과제를 해결하며 팀 기반 창업 역량을 키웁니다.",
+        "challenge": "학생·로컬 팀이 실제 프로젝트와 다양한 협업자로부터 실전 역량을 쌓기 어렵습니다.",
+        "solution": "다국적 스쿼드가 로컬 브리프를 수행하고 팀프러너 코치와 커뮤니티 멘토가 동행합니다.",
+        "impact": [
+          "학생·커뮤니티 팀의 실전 벤처 역량 강화",
+          "글로벌 관점으로 로컬 과제 해결"
+        ],
+        "partners": [
+          "대학",
+          "로컬 혁신 허브",
+          "커뮤니티 조직"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "learningJourney": {
+        "title": "러닝 저니 프로그램",
+        "tagline": "시장조사·기업탐방·문화 경험이 결합된 해외 몰입형 여정",
+        "category": "글로벌 러닝",
+        "description": "스페인·인도·독일·베트남 등에서 시장조사, 인터뷰, 기업탐방, 현장 경험을 통해 글로벌 통찰을 얻는 학습 여정.",
+        "challenge": "팀은 시장마다 통하는 제품·서비스를 설계하기 위한 현장 학습이 필요합니다.",
+        "solution": "큐레이션된 일정으로 인터뷰, 랩 체험, 리플렉션을 진행해 인사이트를 실행으로 전환합니다.",
+        "impact": [
+          "문화적 유연성과 빠른 시장 인사이트 확보",
+          "여러 국가에서 네트워크 활성화"
+        ],
+        "partners": [
+          "Mondragon Team Academy",
+          "Travelling University",
+          "스페인·인도·독일·베트남 지역 파트너"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "openLab": {
+        "title": "글로벌 오픈랩 프로젝트",
+        "tagline": "지자체·대학·기업·문화 파트너와 함께 여는 오픈랩",
+        "category": "오픈랩",
+        "description": "지자체, 대학, 기업, 문화·환경 파트너와 함께 포용적·지속가능한 글로컬 해법을 실험하는 랩을 구축합니다.",
+        "challenge": "복잡한 로컬 이슈는 다양한 주체가 협력하는 열린 구조가 필요합니다.",
+        "solution": "시민, 학생, 실무자가 함께 프로토타입하고 플레이북과 파일럿을 공유하는 랩을 설계합니다.",
+        "impact": [
+          "공공·민간·시빅 파트너와 공동 파일럿",
+          "재사용 가능한 오픈랩 툴킷과 검증된 프로토타입"
+        ],
+        "partners": [
+          "지자체",
+          "대학",
+          "기업",
+          "문화·환경 단체"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "impactConsulting": {
+        "title": "글로벌 임팩트 컨설팅",
+        "tagline": "로컬 조직의 글로벌 임팩트 프로젝트 설계",
+        "category": "임팩트 컨설팅",
+        "description": "지역 단체·상점과 협력해 글로벌 시야와 로컬 뿌리를 갖춘 임팩트 프로젝트를 설계합니다.",
+        "challenge": "로컬 조직은 뿌리를 지키면서 글로벌 기준에 맞는 성장 전략이 필요합니다.",
+        "solution": "국제 벤치마크를 반영한 임팩트 전략, 벤처 설계, 역량 강화를 제공합니다.",
+        "impact": [
+          "글로벌 모범 사례에 맞춘 지역 전략",
+          "임팩트를 실행할 팀 역량 강화"
+        ],
+        "partners": [
+          "지방 정부",
+          "대학",
+          "소셜벤처"
+        ],
+        "status": "활성",
+        "website": "#"
+      },
+      "asiaEuBridge": {
+        "title": "스타트업 브릿지 아시아–EU",
+        "tagline": "한국 스타트업과 유럽 기업·생태계를 잇는 프로그램",
+        "category": "오픈 이노베이션",
+        "description": "오픈 이노베이션, 현지 인터뷰, 데모데이, 글로벌 행사 연계를 포함한 국제 협업 프로그램 (B.Ventures Bilbao, South Summit Madrid, MWC Barcelona).",
+        "challenge": "스타트업이 새 시장에서 신뢰할 수 있는 검증·협업 경로를 찾기 어렵습니다.",
+        "solution": "유럽 파트너와의 매칭, 현장 몰입, 스테이지 맞춤 데모로 시장 진입을 돕습니다.",
+        "impact": [
+          "국경을 넘는 파일럿과 파트너십",
+          "현지 인사이트로 다듬어진 시장 진출 스토리"
+        ],
+        "partners": [
+          "유럽 액셀러레이터(TEAMLABS, TZBZ, BerriUp)",
+          "기업 파트너",
+          "글로벌 행사 플랫폼"
+        ],
+        "status": "활성",
+        "website": "#"
+      }
+    },
+    "cta": {
+      "title": "협업하고 싶으신가요?",
+      "description": "의미 있는 프로젝트에 대한 파트너십과 협업에 항상 열려 있습니다.",
+      "button": "문의하기"
+    }
+  }
+}
