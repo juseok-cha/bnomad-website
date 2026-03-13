@@ -29,11 +29,10 @@ export default function Navigation({ lang, dict }: NavigationProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const pathname = usePathname()
 
-  // Only 5 pages: Home (implicit), Projects, Team, Blog, Contact
+  // Only 4 pages: Home (implicit), Projects, Team, Contact
   const navLinks: NavLink[] = [
     { name: dict.nav.projects || 'Projects', href: `/${lang}/projects` },
     { name: dict.nav.team || 'Team & Partners', href: `/${lang}/team` },
-    { name: dict.nav.blog || 'Blog', href: `/${lang}/blog` },
     { name: dict.nav.contact || 'Contact', href: `/${lang}/contact` },
   ]
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { AuthProvider } from '@/lib/contexts/AuthContext'
 
 const theme = extendTheme({
   config: {
@@ -51,7 +50,7 @@ const theme = extendTheme({
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ChakraProvider theme={theme}>
-      <AuthProvider>{children}</AuthProvider>
+      {children}
     </ChakraProvider>
   )
 }

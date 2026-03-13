@@ -419,16 +419,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
               </Box>
             ))}
           </SimpleGrid>
-          <HStack justify="space-between" mt={8}>
+          <HStack justify="flex-start" mt={8}>
             <Link href={`/${locale}/projects`}>
               <Button variant="link" color="brand.500" fontWeight="700">
                 {t.projects.cta} →
               </Button>
-            </Link>
-            <Link href={`/${locale}/blog`}>
-              <Text color="gray.400" _hover={{ color: 'brand.500' }} cursor="pointer">
-                {locale === 'en' ? 'Read stories and updates' : '스토리와 소식을 읽어보세요'}
-              </Text>
             </Link>
           </HStack>
         </Box>
