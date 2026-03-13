@@ -32,6 +32,12 @@ export async function getPublishedPosts(
   limitCount: number = 10
 ): Promise<BlogPost[]> {
   try {
+    // If Firebase is not configured, return empty array
+    if (!db) {
+      console.warn('Firebase not configured, returning empty posts array')
+      return []
+    }
+
     const postsRef = collection(db, BLOG_COLLECTION)
     const q = query(
       postsRef,
