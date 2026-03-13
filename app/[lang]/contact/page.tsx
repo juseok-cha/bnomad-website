@@ -18,8 +18,6 @@ import {
   Link as ChakraLink,
 } from '@chakra-ui/react'
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons'
-import { collection, addDoc, Timestamp } from 'firebase/firestore'
-import { db } from '@/lib/firebase/config'
 import { useParams } from 'next/navigation'
 
 export default function ContactPage() {
@@ -55,22 +53,19 @@ export default function ContactPage() {
 
     setLoading(true)
 
-    try {
-      const contactsRef = collection(db, 'contacts')
-      await addDoc(contactsRef, {
-        ...formData,
-        createdAt: Timestamp.now(),
-        lang: lang,
-      })
+    // Simulate form submission
+    // TODO: Integrate with your preferred contact form service (e.g., Formspree, EmailJS, or your backend API)
+    setTimeout(() => {
+      console.log('Contact form data:', { ...formData, lang })
 
       toast({
-        title: lang === 'en' ? 'Message sent!' : '메시지 전송 완료!',
+        title: lang === 'en' ? 'Message received!' : '메시지 수신 완료!',
         description:
           lang === 'en'
-            ? 'Thank you for reaching out. We will get back to you soon.'
-            : '문의해 주셔서 감사합니다. 곧 연락드리겠습니다.',
+            ? 'Thank you for your message. Please email us directly at info@bnomad.co for immediate assistance.'
+            : '메시지 감사합니다. 즉시 지원이 필요하시면 info@bnomad.co로 이메일 주세요.',
         status: 'success',
-        duration: 5000,
+        duration: 7000,
       })
 
       setFormData({
@@ -79,20 +74,9 @@ export default function ContactPage() {
         subject: '',
         message: '',
       })
-    } catch (error) {
-      console.error('Error sending message:', error)
-      toast({
-        title: lang === 'en' ? 'Error' : '오류',
-        description:
-          lang === 'en'
-            ? 'Failed to send message. Please try again.'
-            : '메시지 전송에 실패했습니다. 다시 시도해주세요.',
-        status: 'error',
-        duration: 3000,
-      })
-    } finally {
+
       setLoading(false)
-    }
+    }, 1000)
   }
 
   return (

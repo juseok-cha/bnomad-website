@@ -7,9 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "setup:firebase": "node scripts/setup-firebase.js",
-    "check:firebase": "node scripts/check-firebase.js"
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -25,18 +23,12 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@tailwindcss/postcss": "^4.1.16",
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "firebase": "^12.5.0",
-    "firebase-admin": "^13.6.0",
     "framer-motion": "^10.18.0",
     "next": "^16.0.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-markdown": "^10.1.0",
-    "react-syntax-highlighter": "^16.1.0"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.15.8",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
