@@ -62,15 +62,6 @@ export default function Footer({ lang, dict }: FooterProps) {
                 {dict.nav?.team || 'Team & Partners'}
               </ChakraLink>
             </Link>
-            <Link href={`/${lang}/blog`}>
-              <ChakraLink
-                color="gray.400"
-                _hover={{ color: 'brand.500' }}
-                transition="color 0.2s"
-              >
-                {dict.nav?.blog || 'Blog'}
-              </ChakraLink>
-            </Link>
             <Link href={`/${lang}/contact`}>
               <ChakraLink
                 color="gray.400"
@@ -123,16 +114,6 @@ export default function Footer({ lang, dict }: FooterProps) {
           <Text fontSize={'sm'} color="gray.600">
             {dict.footer?.copyright || '© 2024 BNomad. All rights reserved.'}
           </Text>
-          <Link href={`/${lang}/admin/login`}>
-            <ChakraLink
-              fontSize={'xs'}
-              color="gray.600"
-              _hover={{ color: 'brand.500' }}
-              transition="color 0.2s"
-            >
-              Admin
-            </ChakraLink>
-          </Link>
         </HStack>
       </Container>
     </Box>
